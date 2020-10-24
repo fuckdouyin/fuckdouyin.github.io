@@ -1,0 +1,290 @@
+.wrap-content{
+    width: 100%;
+    min-height:100%;
+    position: relative;
+}
+.wrap-content .bg-pink{
+    display: block;
+    background: url("../img/bg_pink.png")no-repeat;
+    background-size:100% 100%;
+    width: 100%;
+    height: 3890px;
+    position: absolute;
+    top:500px;
+    z-index: -1;
+}
+.wrap-content .wrap-title{
+    color: #222;
+    font-size:30px;
+    height:100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin-top: 30px;
+}
+.wrap-content .wrap-title:after{
+    content: '';
+    position: absolute;
+    left:50%;
+    bottom:18px;
+    width:60px;
+    height:4px;
+    background: #fc6970;
+}
+/*公司介绍*/
+.wrap-content .company-introduction{
+    width: 1000px;
+    height:753px;
+    margin:0 auto;
+    padding:0 20px;
+}
+.wrap-content .company-introduction .company-content{
+    padding-left:20px;
+}
+.wrap-content .company-introduction .company-content p{
+    color: #222;
+    font-size: 18px;
+    position: relative;
+}
+.wrap-content .company-introduction .company-content p:nth-of-type(1){
+   line-height:46px ;
+
+}
+.wrap-content .company-introduction .company-content p:nth-of-type(2){
+    line-height:36px ;
+    margin-top: 85px;
+    width: 708px;
+}
+.wrap-content .company-introduction .company-content .dreamPix{
+    background: url("../img/pix.png")no-repeat;
+    width: 204px;
+    height: 90px;
+    display: inline-block;
+    background-size: 100% 100%;
+    margin-right: 55px;
+    float: left;
+}
+.wrap-content .company-introduction .company-content .chumanniang{
+    background: url("../img/mn.png")no-repeat;
+    width: 240px;
+    height: 240px;
+    display: inline-block;
+    background-size: 100% 100%;
+    position: absolute;
+    right:-272px;
+    top:-47px;
+}
+/*触漫家族*/
+.wrap-content .chumanjiazu{
+    width:1000px;
+    height:1068px;
+    margin:0 auto;
+    padding:0 20px;
+}
+.wrap-content .chumanjiazu .chuman-introdution{
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    line-height: 33px;
+    margin:0 95px;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang{
+    margin-top: 48px;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item{
+    width:282px;
+    height:407px;
+    float: left;
+    text-align: center;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item:nth-of-type(2){
+    margin:0 58px;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item:nth-of-type(4){
+    margin-left:174px;
+    margin-right: 55px;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .name{
+    color: #222;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 24px;
+    position: relative;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .name:after{
+    content: '';
+    position: absolute;
+    bottom:-8px;
+    right:-1px;
+    width:30px;
+    height:3px;
+    border-radius: 3px;
+    background: #e64b73;
+
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .status{
+    color: #222;
+    font-size: 24px;
+    margin-top: 24px;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header{
+    width:282px;
+    height:282px;
+    position: relative;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header img{
+    width:100%;
+    height:100%;
+    display: block;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: .3s all;
+    opacity: 0;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header:hover .mask{
+    opacity:1;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask .small-header{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    position: relative;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: lightcyan;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask .small-header:before{
+    content: '';
+    position: absolute;
+    left:60px;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px ;
+    height:2px;
+    background: -webkit-linear-gradient(left, #fff, #444);;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask .small-header:after{
+    content: '';
+    position: absolute;
+    right:60px;
+    top:50%;
+    transform: translateY(-50%);
+    width:40px ;
+    height:2px;
+    background: -webkit-linear-gradient(right, #fff, #444);;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask .small-header img{
+    width: 100%;
+    height:100%;
+}
+.wrap-content .chumanjiazu .chuman-xingxiang .xingxiang-item .header .mask .mask-info{
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    position: absolute;
+    top:110px;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+/*发展历程*/
+.wrap-content .history{
+    width: 1000px;
+    margin:0 auto;
+}
+/*梦映之家*/
+.wrap-content .mengying-home{
+    width: 1000px;
+    height:705px;
+    background: #fff;
+    margin:0 auto;
+}
+.wrap-content .mengying-home .mengying-introdution{
+    color: #666;
+    font-size: 18px;
+    text-align: center;
+    line-height: 33px;
+    margin:0 10px;
+}
+.wrap-content .mengying-home .mengying-picture{
+    width: 100%;
+    margin-top: 93px;
+}
+.wrap-content .mengying-home .mengying-picture .picture-item{
+    /*width:285px;*/
+    /*height:230px;*/
+    /*border-radius:10px;*/
+    float: left;
+}
+.wrap-content .mengying-home .mengying-picture .item2{
+    /*width:400px;*/
+    /*height:317px;*/
+    margin:0 9px;
+    margin-top: -35px;
+}
+
+.news{
+    width: 1000px;
+    margin:80px auto 0;
+    height: auto;
+
+}
+.news .xgxw{
+    width: 116px;
+    height: 43px;
+    background: url("../img/xgxw.png")no-repeat;
+    background-size: 100%;
+    display: block;
+    margin:0 auto 20px;
+}
+.news .newList{
+    width: 100%;
+}
+.news .newList li{
+    width: 100%;
+    height: 65px;
+    line-height:65px;
+    border-bottom: 1px dashed #f2f2f2;
+    cursor: pointer;
+    position: relative;
+}
+.news .newList li a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    line-height:65px;
+    left: 0;
+    display: block;
+}
+.news .newList li a>.icon{
+    width: 10px;
+    height: 13px;
+    display: inline-block;
+    background: url("../img/zs.png")no-repeat;
+    background-size: 100%;
+    vertical-align: 3%;
+    margin-right: 10px;
+}
+.news .newList li a>p{
+     color: #222;
+     font-size: 20px;
+    display: inline-block;
+ }
+.news .newList li a>span{
+    font-size: 16px;
+    color: #999999;
+    float: right;
+}
