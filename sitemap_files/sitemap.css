@@ -1,0 +1,9 @@
+.main {width: 1200px;margin: 0 auto;padding-top: 50px;padding-bottom: 50px; }
+.main h1.title {color: #fc6970;font-size: 28px;margin-bottom: 40px; }
+.main dl dt {font-size: 14px;color: #333;font-weight: bold;padding-bottom: 30px;padding-top: 25px; }
+.main dl dd ul {border-bottom: 1px dashed #e5e5e5;padding-bottom: 25px; }
+.main dl dd ul li {display: inline-block;*display: inline;*zoom: 1; }
+.main dl dd ul li a {font-size: 12px;color: #666;margin-right: 20px; }
+.main dl dd ul li a:hover {color: #fc6970; }
+.main dt a {font-size: 14px;color: #333;font-weight: bold; }
+.main dt a:hover {color: #fc6970; }
