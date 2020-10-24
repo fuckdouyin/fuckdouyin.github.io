@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://chumanapp.com/painterUpLoad.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="触漫,漫画创作,AVG创作,动漫社区,Z世代,免费漫画,文字游戏,免费小说,我与秋田,王爷的小兔妖,稿费,投稿,游戏制作,成名,出名" name="keywords">
+    <meta content="触漫-超好玩的泛二次元创作社区，拥有独特的换装系统和编辑器，用户可轻松定制个性虚拟形象；低门槛创建漫画、漫剧等多样化虚拟内容；加入各种社团，以虚拟身份在触漫进行直播、阅读、交友扩列等活动；还提供了连麦、虚拟形象直播、扭蛋抽卡更多互动玩法。平台目前已经沉淀百万部漫画、点读式小说，在全网持续产出阅读量破十亿的IP作品。培育上百个KOL大触，打通了从UGC到PUGC的IP孵化产业链，并与华丰、洽洽等多个快消品牌达成IP跨界合作。" name="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画手入驻申请入口</title>
+    <link rel="stylesheet" href="./painterUpLoad_files/reset.css">
+    <link rel="stylesheet" href="./painterUpLoad_files/painterUpLoad.css">
+    <!-- <link rel="stylesheet" href="./css/memorial.css" /> -->
+  </head>
+  <body>
+    <h1 class="seo-logo">
+      <img src="./painterUpLoad_files/chuman_logo.png" alt="触漫logo" style="display: none;">
+    </h1>
+    <div style="display: none; position: relative; z-index: 2000;">
+      <img src="./painterUpLoad_files/chuman_logo.png" alt="logo" title="触漫-超好玩的泛二次元创作社区">
+    </div>
+    <div id="tip-area" style="display: none;">
+      <span class="animate-show" id="tip-span"></span>
+    </div>
+    <div class="upLoadBox">
+      <div class="header">
+        <p>画手入驻申请入口</p>
+      </div>
+      <div class="dataBox">
+        <!--<div class="txtHeader">基本信息</div>-->
+        <div class="JbDataBox">
+          <div class="su clearfix">
+            <div class="leftBox">
+              <p><span class="must">*</span>真实姓名:</p>
+            </div>
+            <div class="rightBox">
+              <input onfocus="removeBorder(this)" onblur="addBorder(this)" class="ipt" id="real_name" maxlength="50" type="text">
+            </div>
+          </div>
+          <div class="su clearfix">
+            <div class="leftBox">
+              <p><span class="must">*</span>手机号码:</p>
+            </div>
+
+            <div class="rightBox">
+              <input maxlength="11" onfocus="removeBorder(this)" onblur="addBorder(this)" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;);" class="ipt" id="phone" type="text">
+              <p class="rightSec"><span class="must">*</span>QQ:</p>
+              <input onfocus="removeBorder(this)" onblur="addBorder(this)" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;);" class="ipt" id="QQ" type="text">
+            </div>
+          </div>
+
+          <div class="su clearfix">
+            <div class="leftBox">
+              <p><span class="must">*</span>创作方向:</p>
+            </div>
+
+            <div class="rightBox">
+              <div></div>
+              <div class="ipt" id="direction" type="" onclick="openSelectBox()"></div>
+              <!--<input maxlength="11" disabled value="" onclick="openSelectBox()" onkeyup="this.value=this.value.replace(/\D/g,'');" class="ipt" id="direction" type="text">-->
+              <p class="rightSec"><span class="must">*</span>邮箱:</p>
+              <input onfocus="removeBorder(this)" onblur="addBorder(this)" class="ipt" id="email" type="text">
+              <div class="selectBox">
+                <ul>
+                  <li type="1">插画师（提供角色服装设计）</li>
+                  <li type="2">场景画师（提供场景图片）</li>
+                  <li type="3">道具画师（提供道具贴图）</li>
+                  <li type="4">美工（提供封面制作服务）</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="JbDataBox">
+          <div class="su clearfix">
+            <div class="leftBox">
+              <p><span class="must">*</span>上传原创作品:</p>
+            </div>
+            <div class="rightBox">
+              <div id="showImg">
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+                <!--<div class="evidenceImgBox"><span class="precent">50%</span><img src="https://www.2345.com/right/homepage/img/block1701171030/tab1/20180222101123.jpg" alt=""></div>-->
+              </div>
+              <div id="evidenceBtn" style="z-index: 1;">
+                <div class="add_pic"></div>
+                <div class="txtShow">
+                  <p>上传</p>
+                  <p>图片</p>
+                </div>
+              </div>
+            <div id="html5_1elcupj1d58f1o8919r3141c1u3m4_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 20px; width: 146px; height: 146px; overflow: hidden; z-index: 0;"><input id="html5_1elcupj1d58f1o8919r3141c1u3m4" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" accept=""></div></div>
+            <div class="rightBox">
+              <div class="upLoadText">
+                <p>上传说明：</p>
+                <p>1.请上传能代表您个人创作水平的3幅原创作品；</p>
+                <p>2.作品最好与您提交申请的【设计方向】相关；</p>
+                <p>3.单部作品图片大小不得大于15MB。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="su clearfix">
+            <div class="leftBox">
+              <p><span class="must"></span>其他作品链接:</p>
+            </div>
+
+            <div class="rightBox">
+              <input onfocus="removeBorder(this)" onblur="addBorder(this)" class="ipt" id="link" type="text">
+            </div>
+          </div>
+        </div>
+
+        <a id="submitBtn">提交</a>
+
+        <div class="modalBox">
+          <div class="modalTextbox">
+            <p>是否保证，以上陈诉和提供的相关资料 皆是真实、有效和合法的？</p>
+            <a class="cancel">取消</a>
+            <a class="comFirm">确保</a>
+          </div>
+        </div>
+
+        <div class="successBox">
+          <div class="modalTextbox">
+            <p style="margin-bottom: 30px;">提交成功</p>
+
+            <p>感谢您的申请，我们将在7个工作日内完成审核。</p>
+            <p>若审核通过，将以邮件的形式发送审核结果给您。</p>
+            <p>请确保填写的邮箱真实有效，及时查收邮件。</p>
+            <p>并依据邮件内容进入对应联络群号。</p>
+            <a class="cancel" style="border: none; background: #fc6970; color: #fff;">我知道了</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./painterUpLoad_files/jquery-1.11.1.min.js.下载"></script>
+    <script src="./painterUpLoad_files/qiniuBig.js.下载"></script>
+    <script>
+      //        var name,phone,email,address,zipCode,workName,author,msg;
+      //        var picOne = new Array;
+      //        var picTwo = new Array;
+      //        var arr = new Array() ;
+      function show_tip(tipWord, callBack) {
+        var timeout0 = false
+        var timeout1 = false
+
+        function time0() {
+          if (timeout0) return
+          $('#tip-span').addClass('animate-hide')
+          $('aa').removeAttr()
+        }
+
+        function time1() {
+          if (timeout1) return
+          $('#tip-area').hide()
+          $('#tip-span').removeClass('animate-hide')
+          if (callBack) callBack()
+        }
+
+        $('#tip-span').html(tipWord)
+        $('#tip-area').show()
+        $('#tip-area').click(function () {
+          $('#tip-area').hide()
+          timeout0 = true
+          timeout1 = true
+          $('#tip-span').removeClass('animate-hide')
+          if (callBack) callBack()
+        })
+
+        setTimeout(time0, 1000)
+        setTimeout(time1, 2000)
+      }
+
+      $('.selectBox')
+        .find('li')
+        .click(function () {
+          $('#direction').html($(this).html())
+          $('#direction').attr('type', $(this).attr('type'))
+          $('.selectBox').hide()
+        })
+      //下拉框
+      function openSelectBox() {
+        $('.selectBox')
+          .css('width', $('#direction').width() + 30)
+          .toggle()
+      }
+      function closeSelectBox() {
+        $('.selectBox').hide()
+      }
+      //清除红边框
+      function removeBorder(e) {
+        $(e).removeClass('hasNull')
+      }
+      //添加红边框
+      function addBorder(e) {
+        if ($(e).val() == '') {
+          $(e).addClass('hasNull')
+        }
+        //            console.log($(e)[0].id);
+
+        if ($(e)[0].id == 'phone') {
+          if ($('#phone').val() != '') {
+            var re = /^1\d{10}$/
+            if (re.test($('#phone').val())) {
+            } else {
+              show_tip('手机号码不正确')
+              $(e).addClass('hasNull')
+              return false
+            }
+          }
+        }
+        if ($(e)[0].id == 'email') {
+          if ($('#email').val() != '') {
+            var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if (re.test($('#email').val())) {
+            } else {
+              show_tip('邮箱不正确')
+              $(e).addClass('hasNull')
+              return false
+            }
+          }
+        }
+      }
+      $(function () {
+        //            全局数组
+        var topPicList = new Array()
+        var bottomPicList = new Array()
+        var topBtnStatus,
+          bottomBtnStatus = false
+
+        //不保存退出
+        window.onbeforeunload = function () {
+          if (
+            $('#allName').val() != '' ||
+            $('#phone').val() != '' ||
+            $('#email').val() != '' ||
+            $('#adress').val() != '' ||
+            $('#zipCode').val() != '' ||
+            $('#workName').val() != '' ||
+            $('#authorName').val() != '' ||
+            $('#msg').val() != '' ||
+            topPicList.length > 0 ||
+            bottomPicList.length > 0
+          ) {
+            return ''
+          }
+        }
+
+        function checkEmail(str) {
+          var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+          if (re.test(str)) {
+            alert('正确')
+          } else {
+            show_tip('邮箱不正确')
+            return false
+          }
+        }
+
+        $('#submitBtn').click(function () {
+          $('input').each(function (index, e) {
+            if ($(e).attr('id') != 'link') {
+              if ($(e).val() == '') {
+                $(e).addClass('hasNull')
+              }
+            }
+          })
+          $('textarea').each(function (index, e) {
+            if ($(e).val() == '') {
+              $(e).addClass('hasNull')
+            }
+          })
+
+          if ($('#real_name').val() == '') {
+            show_tip('有未填信息')
+            return false
+          }
+          if ($('#phone').val() == '') {
+            show_tip('有未填信息')
+            return false
+          } else {
+            var re = /^1\d{10}$/
+            if (re.test($('#phone').val())) {
+            } else {
+              show_tip('手机号码不正确')
+              return false
+            }
+          }
+          if ($('#QQ').val() == '') {
+            show_tip('有未填信息')
+            return false
+          } else {
+            var re = /^1\d{10}$/
+            if (re.test($('#phone').val())) {
+            } else {
+              show_tip('手机号码不正确')
+              return false
+            }
+          }
+
+          if ($('#email').val() == '') {
+            show_tip('有未填信息')
+            return false
+          } else {
+            var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/
+            if (re.test($('#email').val())) {
+            } else {
+              show_tip('邮箱不正确')
+              return false
+            }
+          }
+
+          if (topPicList.length <= 0) {
+            show_tip('至少上传一张图片')
+            return false
+          }
+          if ($('#direction').html() == '') {
+            show_tip('有未填信息')
+            return false
+          }
+          //            if($('#link').val()==''){
+          //                show_tip('有未填信息');
+          //                return false;
+          //            }
+
+          $('.modalBox').fadeIn(500)
+        })
+        function commit() {
+          $.ajax({
+            //                url:'http://webstaging.chumanapp.com/rights',
+            //                url:'http://staging.chumanapp.com/secure/index.php?m=Api&c=Share&a=save_artist_apply_info',
+            url:
+              'http://api.chumanapp.com/secure/index.php?m=Api&c=Share&a=save_artist_apply_info',
+            type: 'post',
+            dataType: 'JSON',
+            data: {
+              real_name: $('#real_name').val(),
+              phone: $('#phone').val(),
+              QQ: $('#QQ').val(),
+              'e-mail': $('#email').val(),
+              artist_type: $('#direction').attr('type'),
+              image_json: topPicList.toString(),
+              other_url: $('#link').val(),
+            },
+            success: function (res) {
+              //                    res = JSON.parse(res)
+              //                    console.log(res);
+              if (res.status == 'ok') {
+                $('#real_name').val('')
+                $('#phone').val('')
+                $('#QQ').val('')
+                $('#email').val('')
+                $('#direction').html('')
+                $('#link').val('')
+                topPicList = []
+                $('#showImg').html('')
+                $('.modalBox').fadeOut(500)
+                $('.successBox').fadeIn(500)
+                show_tip('提交成功')
+                var a = setTimeout(function () {
+                  clearTimeout(a)
+                  //                            window.location.href='http://www.chumanapp.com';
+                }, 1000)
+              } else {
+                $('.modalBox').fadeOut(500)
+                show_tip(res.message.message)
+              }
+            },
+            error: function (err) {
+              console.log(err)
+              show_tip('提交失败')
+              $('.modalBox').fadeOut(500)
+            },
+          })
+        }
+
+        var upToken
+
+        function loadQiNiu() {
+          upLoadImg('evidenceBtn', 1)
+          //            upLoadImg('visiBtn',2)
+        }
+        loadQiNiu()
+
+        $('.cancel').click(function () {
+          $('.modalBox').fadeOut(500)
+          $('.successBox').fadeOut(500)
+        })
+
+        $('.comFirm').click(function () {
+          commit()
+        })
+
+        function upLoadImg(btn, type) {
+          var topPicLength = 0
+          var bottomPicLength = 0
+          var ar = new Array()
+          var newar = new Array()
+          var uploader = Qiniu.uploader({
+            runtimes: 'html5,flash,html4', // 上传模式，依次退化
+            browse_button: btn, // 上传选择的点选按钮，必需
+            // 在初始化时，uptoken，uptoken_url，uptoken_func三个参数中必须有一个被设置
+            // 切如果提供了多个，其优先级为uptoken > uptoken_url > uptoken_func
+            // 其中uptoken是直接提供上传凭证，uptoken_url是提供了获取上传凭证的地址，如果需要定制获取uptoken的过程则可以设置uptoken_func
+            // uptoken : '<Your upload token>', // uptoken是上传凭证，由其他程序生成
+            //                 uptoken_url: 'http://coco.mallecomics.com/api/qiniu/qiNiu.php',         // Ajax请求uptoken的Url，强烈建议设置（服务端提供）
+            uptoken_func: function () {
+              // 在需要获取uptoken时，该方法会被调用
+              // do something
+              var token
+              $.ajax({
+                url: 'http://webofficial.chumanapp.com/qiniu',
+                //                         url:'http://webstaging.chumanapp.com/qiniu',
+                dataType: 'json',
+                async: false,
+              }).done(function (res) {
+                //                         console.log(res);
+                token = res.data.uptoken
+              })
+              return token
+            },
+            get_new_uptoken: true, // 设置上传文件的时候是否每次都重新获取新的uptoken
+            // downtoken_url: '/downtoken',
+            // Ajax请求downToken的Url，私有空间时使用，JS-SDK将向该地址POST文件的key和domain，服务端返回的JSON必须包含url字段，url值为该文件的下载地址
+            // unique_names: true,              // 默认false，key为文件名。若开启该选项，JS-SDK会为每个文件自动生成key（文件名）
+            // save_key: true,                  // 默认false。若在服务端生成uptoken的上传策略中指定了sava_key，则开启，SDK在前端将不对key进行任何处理
+            domain: 'chumanofficial.chumanapp.com', // bucket域名，下载资源时用到，必需
+            // container: 'container',             // 上传区域DOM ID，默认是browser_button的父元素
+
+            max_file_size: '15mb', // 最大文件体积限制
+            multi_selection: false, //单文件上传
+            //flash_swf_url: 'path/of/plupload/Moxie.swf',  //引入flash，相对路径
+            max_retries: 3, // 上传失败最大重试次数
+            // dragdrop: true,                     // 开启可拖曳上传
+            // drop_element: 'container',          // 拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
+            chunk_size: '5mb', // 分块上传时，每块的体积
+            //                uptoken_url: "/api/qiniu/qiNiu.php",
+            //                uptoken: upToken,
+            //                 uptoken: 'mtF-pUwD2-KBeVZs0hcTaRouMJcI8k5teJeWvdLZ:xpVUQ0XGkuHcfA_4D81tmS8faLI=:eyJzY29wZSI6ImNodW1hbm9mZmljaWFsIiwiZGVhZGxpbmUiOjE1MjE4MDY1Nzl9',
+            auto_start: true, // 选择文件后自动上传，若关闭需要自己绑定事件触发上传
+
+            init: {
+              FilesAdded: function (up, files) {
+                plupload.each(files, function (file) {
+                  // 文件添加进队列后，处理相关的事情
+                  //                            console.log('filetype: ' + file.type);
+                  if (
+                    file.type == 'image/jpeg' ||
+                    file.type == 'image/jpg' ||
+                    file.type == 'image/png' ||
+                    file.type == 'image/gif'
+                  ) {
+                    //                                console.log('type:' + file.type);
+                    var size = file.size / 1024 / 1024
+                    var name = file.name
+                    if (name.indexOf('#') != -1) {
+                      show_tip('文件名不能带有特殊字符')
+                      up.removeFile(file)
+                      return false
+                    }
+                    if (size > 15) {
+                      show_tip('图片大小不超过15M')
+                      up.removeFile(file)
+                      return false
+                    }
+                    // isUpload =true;
+                    // file.album_name=album_name;
+                    //var progress = new FileProgress(file, 'fsUploadProgress');
+                    //progress.setStatus("等待...");
+                    //progress.bindUploadCancel(up);
+                  } else {
+                    show_tip('上传类型不正确')
+                    // isUpload = false;
+                    up.removeFile(file)
+                    return false
+                  }
+                })
+              },
+              BeforeUpload: function (up, file) {
+                // 每个文件上传前，处理相关的事情
+                if (topPicLength > 2) {
+                  up.removeFile(file)
+                  $('#evidenceBtn').hide()
+                  show_tip('图片不超过3张')
+                  return false
+                }
+                if (bottomPicLength > 5) {
+                  up.removeFile(file)
+                  $('#visiBtn').hide()
+                  show_tip('图片不超过6张')
+                  return false
+                }
+                ar.push(topPicLength)
+                newar.push(bottomPicLength)
+                if (type == 1) {
+                  var str =
+                    '<div id="rimg_' +
+                    topPicLength +
+                    '" class="evidenceImgBox"><span class="precent">' +
+                    file.percent +
+                    '</span></div>'
+                  topBtnStatus = true
+                  if (topBtnStatus) {
+                    $('#evidenceBtn').find('.txtShow').hide()
+                    $('#evidenceBtn').find('.add_pic').show()
+                  }
+                  $('#showImg').append(str)
+                } else {
+                  var str =
+                    '<div id="newrimg_' +
+                    bottomPicLength +
+                    '"  class="visiImgBox"><span class="precent">' +
+                    file.percent +
+                    '</span></div>'
+                  bottomBtnStatus = true
+                  if (bottomBtnStatus) {
+                    $('#visiBtn').find('.txtShow').hide()
+                    $('#visiBtn').find('.add_pic').show()
+                  }
+                  $('#visiImg').append(str)
+                }
+              },
+              UploadProgress: function (up, file) {
+                // 每个文件上传时，处理相关的事情
+                //                                $('#percent').html(file.percent);
+                //                                var str ='<div class="evidenceImgBox"><span class="precent">'+file.percent+'</span></div>'
+                if (type == 1) {
+                  $('.evidenceImgBox').find('.precent').html(file.percent)
+                } else {
+                  $('.visiImgBox').find('.precent').html(file.percent)
+                }
+              },
+              FileUploaded: function (up, file, info) {
+                console.log('上传成功')
+
+                // 每个文件上传成功后，处理相关的事情
+                // 其中info.response是文件上传成功后，服务端返回的json，形式如：
+                // {
+                //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
+                //    "key": "gogopher.jpg"
+                //  }
+                // 查看简单反馈
+                var domain = up.getOption('domain')
+                var res = JSON.parse(info.response)
+                //                        console.log(info);
+                //                        console.log(file);
+                var sourceLink = domain + '/' + res.key //获取上传成功后的文件的Url
+                if (type == 1) {
+                  $('.evidenceImgBox')
+                    .eq(topPicLength)
+                    .append('<img src="http://' + sourceLink + '" />')
+                    .find('.precent')
+                    .hide()
+                  $('.evidenceImgBox')
+                    .eq(topPicLength)
+                    .find('img')
+                    .on('load', function () {
+                      var w = $(this)[0].naturalWidth
+                      var h = $(this)[0].naturalHeight
+                      //                                console.log(w,h);
+                      if (w > h) {
+                        //                                    console.log('横图');
+                        $(this).addClass('Himg')
+                        $(this).removeClass('Cimg')
+                        $(this).removeClass('Zimg')
+                      } else if (w < h) {
+                        //                                    console.log('长图');
+                        $(this).addClass('Cimg')
+                        $(this).removeClass('Himg')
+                        $(this).removeClass('Zimg')
+                      } else if (w == h) {
+                        //                                    console.log('正方形图');
+                        $(this).addClass('Zimg')
+                        $(this).removeClass('Cimg')
+                        $(this).removeClass('Himg')
+                      }
+                    })
+                  newupLoadImg('rimg_' + ar[topPicLength], upToken, 1)
+                  topPicLength++
+                  if (topPicLength >= 3) {
+                    $('#evidenceBtn').hide()
+                  }
+                  var saveLink = 'http://' + sourceLink
+                  topPicList.push(res.key)
+
+                  //                            console.log(topPicList);
+                } else {
+                  $('.visiImgBox')
+                    .eq(bottomPicLength)
+                    .append('<img src="http://' + sourceLink + '" />')
+                    .find('.precent')
+                    .hide()
+                  $('.visiImgBox')
+                    .eq(bottomPicLength)
+                    .find('img')
+                    .on('load', function () {
+                      var w = $(this)[0].naturalWidth
+                      var h = $(this)[0].naturalHeight
+                      //                                console.log(w,h);
+
+                      if (w > h) {
+                        //                                    console.log('横图');
+                        $(this).addClass('Himg')
+                        $(this).removeClass('Cimg')
+                        $(this).removeClass('Zimg')
+                      } else if (w < h) {
+                        //                                    console.log('长图');
+                        $(this).addClass('Cimg')
+                        $(this).removeClass('Himg')
+                        $(this).removeClass('Zimg')
+                      } else if (w == h) {
+                        //                                    console.log('正方形图');
+                        $(this).addClass('Zimg')
+                        $(this).removeClass('Cimg')
+                        $(this).removeClass('Himg')
+                      }
+                    })
+                  newupLoadImg('newrimg_' + newar[bottomPicLength], upToken, 2)
+                  bottomPicLength++
+                  if (bottomPicLength >= 6) {
+                    $('#visiBtn').hide()
+                  }
+                  var saveLink = 'http://' + sourceLink
+                  bottomPicList.push(res.key)
+                  //                            console.log(bottomPicList);
+                }
+              },
+              Error: function (up, err, errTip) {
+                //上传出错时，处理相关的事情
+              },
+              UploadComplete: function () {
+                //队列文件处理完毕后，处理相关的事情
+              },
+              Key: function (up, file) {
+                // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
+                // 该配置必须要在unique_names: false，save_key: false时才生效
+                file = file.name.split('.')
+                var key =
+                  'painterApply/' +
+                  Date.parse(new Date()) +
+                  parseInt(Math.random() * 1000) +
+                  '-' +
+                  file[0] +
+                  '.' +
+                  file[1]
+                return key
+              },
+            },
+          })
+        }
+
+        function newupLoadImg(id, type) {
+          //                console.log(id)
+          var newtopPicLength = 0
+
+          var Q2 = new QiniuJsSDK()
+          var uploader2 = Q2.uploader({
+            runtimes: 'html5,flash,html4', // 上传模式，依次退化
+            browse_button: id, // 上传选择的点选按钮，必需
+            // 在初始化时，uptoken，uptoken_url，uptoken_func三个参数中必须有一个被设置
+            // 切如果提供了多个，其优先级为uptoken > uptoken_url > uptoken_func
+            // 其中uptoken是直接提供上传凭证，uptoken_url是提供了获取上传凭证的地址，如果需要定制获取uptoken的过程则可以设置uptoken_func
+            // uptoken : '<Your upload token>', // uptoken是上传凭证，由其他程序生成
+            // uptoken_url: '/uptoken',         // Ajax请求uptoken的Url，强烈建议设置（服务端提供）
+            uptoken_func: function () {
+              // 在需要获取uptoken时，该方法会被调用
+              // do something
+              var token
+              $.ajax({
+                url: 'http://webofficial.chumanapp.com/qiniu',
+                //                             url:'http://webstaging.chumanapp.com/qiniu',
+                dataType: 'json',
+                async: false,
+              }).done(function (res) {
+                token = res.data.uptoken
+              })
+              return token
+            },
+            get_new_uptoken: true, // 设置上传文件的时候是否每次都重新获取新的uptoken
+            multi_selection: false, //单文件上传
+            // downtoken_url: '/downtoken',
+            // Ajax请求downToken的Url，私有空间时使用，JS-SDK将向该地址POST文件的key和domain，服务端返回的JSON必须包含url字段，url值为该文件的下载地址
+            // unique_names: true,              // 默认false，key为文件名。若开启该选项，JS-SDK会为每个文件自动生成key（文件名）
+            // save_key: true,                  // 默认false。若在服务端生成uptoken的上传策略中指定了sava_key，则开启，SDK在前端将不对key进行任何处理
+            domain: 'chumanofficial.chumanapp.com', // bucket域名，下载资源时用到，必需
+            // container: 'container',             // 上传区域DOM ID，默认是browser_button的父元素
+            max_file_size: '15mb', // 最大文件体积限制
+            //flash_swf_url: 'path/of/plupload/Moxie.swf',  //引入flash，相对路径
+            max_retries: 0, // 上传失败最大重试次数
+            // dragdrop: true,                     // 开启可拖曳上传
+            // drop_element: 'container',          // 拖曳上传区域元素的ID，拖曳文件或文件夹后可触发上传
+            chunk_size: '15mb', // 分块上传时，每块的体积
+            //                    uptoken_url: "/api/qiniu/qiNiu.php",
+            //                    uptoken_url: "http://coco.mallecomics.com/api/qiniu/qiNiu.php",
+            //                    uptoken: token,
+            // uptoken: 'zP2mfRlsHVEXR4tHAza-FUTgWEqLMGqmcM98VAtd:hqyeQXxGMeVjK8QclLunVOncpiU=:eyJzY29wZSI6Im1hbGxlc3RhZ2luZyIsImRlYWRsaW5lIjoxNTE5MzcwMDU1fQ==',
+            auto_start: true, // 选择文件后自动上传，若关闭需要自己绑定事件触发上传
+
+            init: {
+              FilesAdded: function (up, files) {
+                plupload.each(files, function (file) {
+                  // 文件添加进队列后，处理相关的事情
+                  //                                console.log('filetype: ' + file.type);
+                  if (
+                    file.type == 'image/jpeg' ||
+                    file.type == 'image/jpg' ||
+                    file.type == 'image/png' ||
+                    file.type == 'image/gif'
+                  ) {
+                    //                                    console.log('type:' + file.type);
+                    var size = file.size / 1024 / 1024
+                    var name = file.name
+                    if (name.indexOf('#') != -1) {
+                      show_tip('文件名不能带有特殊字符')
+                      up.removeFile(file)
+                      return false
+                    }
+                    if (size > 15) {
+                      show_tip('图片大小不超过15M')
+                      up.removeFile(file)
+                      return false
+                    }
+                  } else {
+                    show_tip('上传类型不正确')
+                    // isUpload = false;
+                    up.removeFile(file)
+
+                    return false
+                  }
+                })
+              },
+              BeforeUpload: function (up, file) {
+                // 每个文件上传前，处理相关的事情
+                //var str ='<div id="rimg_'+topPicLength+'" class="evidenceImgBox"><span class="precent">'+file.percent+'</span></div>';
+
+                $('#' + id)
+                  .find('.precent')
+                  .show()
+              },
+              UploadProgress: function (up, file) {
+                // 每个文件上传时，处理相关的事情
+                //                                $('#percent').html(file.percent);
+                //                                var str ='<div class="evidenceImgBox"><span class="precent">'+file.percent+'</span></div>'
+                //                            $('.evidenceImgBox').find('.precent').html(file.percent)
+                $('#' + id)
+                  .find('.precent')
+                  .html(file.percent)
+              },
+              FileUploaded: function (up, file, info) {
+                console.log('上传成功')
+
+                newtopPicLength++
+                // 每个文件上传成功后，处理相关的事情
+                // 其中info.response是文件上传成功后，服务端返回的json，形式如：
+                // {
+                //    "hash": "Fh8xVqod2MQ1mocfI4S4KpRL6D98",
+                //    "key": "gogopher.jpg"
+                //  }
+                // 查看简单反馈
+                var domain = up.getOption('domain')
+                var res = JSON.parse(info.response)
+                //                            console.log(info);
+                //                            console.log(file);
+                var sourceLink = domain + '/' + res.key //获取上传成功后的文件的Url
+
+                if (type == 1) {
+                  var index = id.split('rimg_')[1]
+                  //                                console.log(id)
+                  var saveLink = 'http://' + sourceLink
+                  topPicList.splice(index, 1, res.key)
+                  //                                console.log(topPicList);
+                } else {
+                  var index = id.split('newrimg_')[1]
+                  //                                console.log(index)
+                  var saveLink = 'http://' + sourceLink
+                  bottomPicList.splice(index, 1, res.key)
+                  //                                console.log(bottomPicList);
+                }
+
+                $('#' + id)
+                  .find('img')
+                  .attr('src', 'http://' + sourceLink)
+                $('#' + id)
+                  .find('.precent')
+                  .hide()
+              },
+              Error: function (up, err, errTip) {
+                //上传出错时，处理相关的事情
+              },
+              UploadComplete: function () {
+                //队列文件处理完毕后，处理相关的事情
+              },
+              Key: function (up, file) {
+                // 若想在前端对每个文件的key进行个性化处理，可以配置该函数
+                // 该配置必须要在unique_names: false，save_key: false时才生效
+                file = file.name.split('.')
+                var key =
+                  'chumanOfficial/' +
+                  Date.parse(new Date()) +
+                  parseInt(Math.random() * 1000) +
+                  '-' +
+                  file[0] +
+                  '.' +
+                  file[1]
+                return key
+              },
+            },
+          })
+        }
+      })
+    </script>
+    <div style="display: none;">
+      <script src="./painterUpLoad_files/stat.php" language="JavaScript"></script>
+    </div>
+  
+
+</body></html>
