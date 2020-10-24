@@ -1,0 +1,1049 @@
+.slideContent{
+    width: 1200px;
+    height: auto;
+    margin:0 auto;
+}
+.slideContent .banner{
+    width: 1200px;
+    height: 500px;
+    margin:40px auto 90px;
+    overflow: hidden;
+    position: relative;
+}
+.slideContent .banner .swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.slideContent .banner .swiper-container .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide{
+    width: 100%;
+    height: 100%;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox{
+    width: 364px;
+    height: 500px;
+    position: relative;
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox >a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox:hover  .hoverBox{
+    display: block;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .name{
+    font-size:40px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top: 180px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox{
+    width: 180px;
+    height: 50px;
+    margin:10px auto;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox .logoBox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox .logoBox >img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox  .textBox{
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox  .textBox .catText{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox  .textBox .rq{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin-top: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox .hoverBox .concatBox  .textBox .rq .num{
+    font-size:18px;
+    color: #FFB300;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .leftBox img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox{
+    width: 830px;
+    height: 500px;
+    position: relative;
+    margin-left: 6px;
+    float: left;
+}
+/*top*/
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top{
+    width: 830px;
+    height: 246px;
+    margin-bottom: 8px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox{
+    width: 450px;
+    height: 246px;
+    float: left;
+    margin-right: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox{
+    width: 374px;
+    height: 246px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox >img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox >a{
+    width: 100%;
+    height:  100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox:hover  .hoverBox{
+    display: block;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .name{
+    font-size:40px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top: 67px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox{
+    width: 180px;
+    height: 50px;
+    margin:10px auto;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox .logoBox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox .logoBox >img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox  .textBox{
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox  .textBox .catText{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox  .textBox .rq{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin-top: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topLeftBox .hoverBox .concatBox  .textBox .rq .num{
+    font-size:18px;
+    color: #FFB300;
+}
+
+
+
+
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox >img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox >a{
+    width: 100%;
+    height:  100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox:hover  .hoverBox{
+    display: block;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .name{
+    font-size:40px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top: 67px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox{
+    width: 180px;
+    height: 50px;
+    margin:10px auto;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox .logoBox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox .logoBox >img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox  .textBox{
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox  .textBox .catText{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox  .textBox .rq{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin-top: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .topRightBox .hoverBox .concatBox  .textBox .rq .num{
+    font-size:18px;
+    color: #FFB300;
+}
+
+
+ /*bottom*/
+ .slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom{
+    width: 830px;
+    height: 246px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox{
+    width: 374px;
+    height: 246px;
+    float: left;
+    margin-right: 6px;
+    overflow: hidden;
+    position: relative;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox{
+    width: 450px;
+    height: 246px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox >img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .bottomLeftBox .hoverBox >a{
+    width: 100%;
+    height:  100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox:hover  .hoverBox{
+    display: block;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .name{
+    font-size:40px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top: 67px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox{
+    width: 180px;
+    height: 50px;
+    margin:10px auto;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox .logoBox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox .logoBox >img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox  .textBox{
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox  .textBox .catText{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox  .textBox .rq{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin-top: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomLeftBox .hoverBox .concatBox  .textBox .rq .num{
+    font-size:18px;
+    color: #FFB300;
+}
+
+
+
+
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox >img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .top .bottomRightBox .hoverBox >a{
+    width: 100%;
+    height:  100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox:hover  .hoverBox{
+    display: block;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .name{
+    font-size:40px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top: 67px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox{
+    width: 180px;
+    height: 50px;
+    margin:10px auto;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox .logoBox{
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox .logoBox >img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox  .textBox{
+    float: left;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox  .textBox .catText{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox  .textBox .rq{
+    height:18px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin-top: 10px;
+}
+.slideContent .banner .swiper-container .swiper-wrapper .swiper-slide .rightBox .bottom .bottomRightBox .hoverBox .concatBox  .textBox .rq .num{
+    font-size:18px;
+    color: #FFB300;
+}
+.slideContent .banner .swiper-button-next{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_right_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.slideContent .banner .swiper-button-next:hover{
+    background: url("../img/jiantou_right_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+.slideContent .banner .swiper-button-disabled{
+    opacity:1;
+    cursor: pointer;
+    z-index: 999;
+    pointer-events:auto;
+    display: none;
+}
+.slideContent .banner .swiper-button-prev{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_left_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+.slideContent .banner .swiper-button-prev:hover{
+    background: url("../img/jiantou_left_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+
+/*超人气漫画*/
+.crqmh{
+    width: 1200px;
+    height: 456px;
+}
+.crqmh .title{
+    /*width: 148px;*/
+    height: 42px;
+    /*background: url("../img/2019crqmh.png")no-repeat;*/
+    /*background-size: 100%;*/
+    margin:0 auto 30px;
+    position: relative;
+}
+.crqmh .title >span{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.crqmh .title >span:before{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #fc6970;
+    right:0;
+    bottom: -20%;
+}
+.crqmh .crqmh_slideBox{
+    width:1200px;
+    height: 384px;
+    overflow: hidden;
+    position: relative;
+}
+.crqmh .crqmh_slideBox .swiper-button-next1{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_right_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+}
+.crqmh .crqmh_slideBox .swiper-button-prev1{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_left_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+}
+.crqmh .crqmh_slideBox .swiper-button-next1:hover{
+    background: url("../img/jiantou_right_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+.crqmh .crqmh_slideBox .swiper-button-prev1:hover{
+    background: url("../img/jiantou_left_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+.crqmh .crqmh_slideBox  .swiper-button-disabled{
+    opacity:1;
+    cursor: pointer;
+    z-index: 999;
+    pointer-events:auto;
+    display: none;
+}
+.crqmh .crqmh_slideBox .imgBox{
+    width:288px;
+    height: 184px;
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border-radius:10px;
+}
+.crqmh .crqmh_slideBox .imgBox:nth-of-type(4n){
+    margin-right: 0;
+}
+.crqmh .crqmh_slideBox .imgBox >img{
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.crqmh .crqmh_slideBox .imgBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left: 0;
+    display: none;
+}
+.crqmh .crqmh_slideBox .imgBox:hover{
+    border: 2px solid #fc6970;
+    box-sizing: border-box;
+}
+.crqmh .crqmh_slideBox .imgBox:hover .hoverBox{
+    display: block;
+}
+.crqmh .crqmh_slideBox .imgBox:hover .hoverBox >a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.crqmh .crqmh_slideBox .imgBox .hoverBox .name{
+    width:100%;
+    text-align: center;
+    font-size:24px;
+    color:rgba(255,255,255,1);
+    margin:47px auto 20px;
+
+}
+.crqmh .crqmh_slideBox .imgBox .hoverBox .desc{
+    width:252px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin:0 auto;
+}
+
+/*精彩漫剧*/
+.jcmj{
+    width: 1200px;
+    height: 489px;
+    position: relative;
+    margin-bottom: 90px;
+}
+.jcmj .title{
+    /*width: 117px;*/
+    height: 42px;
+    /*background: url("../img/2019jcmj.png")no-repeat;*/
+    /*background-size: 100% 100%;*/
+    margin:90px auto 30px;
+    position: relative;
+}
+.jcmj .title >span{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.jcmj .title >span:before{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 4px;
+    background: #fc6970;
+    right:0;
+    bottom: -20%;
+}
+.jcmj_slideBox{
+    width: 1200px;
+    height: 416px;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+
+.jcmj .jcmj_slideBox .swiper-button-next2{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_right_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+}
+.jcmj .jcmj_slideBox .swiper-button-prev2{
+    width: 32px;
+    height: 100px;
+    background: url("../img/jiantou_left_nor@2x.png")no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    cursor: pointer;
+}
+.jcmj .jcmj_slideBox .swiper-button-next2:hover{
+    background: url("../img/jiantou_right_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+.jcmj .jcmj_slideBox .swiper-button-prev2:hover{
+    background: url("../img/jiantou_left_pre@2x.png")no-repeat;
+    background-size: 100% 100%;
+}
+.jcmj .jcmj_slideBox  .swiper-button-disabled{
+    opacity:1;
+    cursor: pointer;
+    z-index: 999;
+    pointer-events:auto;
+    display: none;
+}
+.jcmj_slideBox .swiper-slide .imgBox{
+    width: 288px;
+    height: 416px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 16px;
+    border-radius:10px ;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+.jcmj_slideBox .swiper-slide .imgBox:last-of-type{
+    margin-right: 0;
+}
+.jcmj_slideBox .swiper-slide .imgBox >img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.jcmj_slideBox .swiper-slide .imgBox .hoverBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    top:0;
+    left: 0;
+    display: none;
+}
+.jcmj_slideBox .swiper-slide .imgBox .hoverBox > a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.jcmj_slideBox .swiper-slide .imgBox:hover{
+    border: 2px solid #fc6970;
+    box-sizing: border-box;
+}
+.jcmj_slideBox .swiper-slide .imgBox:hover .hoverBox{
+    display: block;
+}
+.jcmj_slideBox .swiper-slide .imgBox .hoverBox .name{
+    font-size:24px;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    margin-top:153px;
+}
+.jcmj_slideBox .swiper-slide .imgBox .hoverBox .desc{
+    width:251px;
+    font-size:18px;
+    color:rgba(255,255,255,1);
+    margin:16px auto 0;
+}
+
+
+
+
+
+
+
+
+.wrap-title{
+    /*color: #222;*/
+    /*font-size:30px;*/
+    /*height:100px;*/
+    /*line-height: 100px;*/
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+    /*position: relative;*/
+    /*width: 119px;*/
+    height: 42px;
+    /*background: url("../img/2019hzpt.png")no-repeat;*/
+    /*background-size: 100%;*/
+    margin: 0 auto;
+    position: relative;
+
+}
+.wrap-title>span{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wrap-title >span:after{
+    content: '';
+    position: absolute;
+    right:0;
+    bottom:-20%;
+    width:50%;
+    height:4px;
+    background: #fc6970;
+}
+
+
+
+
+.hzpt{
+    width: 100%;
+    min-height: 590px;
+    box-sizing: border-box;
+}
+.hzptBox{
+    width: 1000px;
+    height: auto;
+    margin:0 auto;
+}
+.hzptBox >img{
+    display: block;
+    margin:80px auto 0;
+}
+.HotJudge{
+    width: 100%;
+    padding:20px 0 50px;
+    min-width:1200px;
+}
+.HotJudge .HotJudgeList{
+    width: 1000px;
+    margin-top: 40px;
+    overflow: hidden;
+    min-height:300px;
+}
+
+.HotJudge .HotJudgeList1>li{
+    width: 124px;
+    height: 124px;
+    float: left;
+    margin:0 18px 50px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.HotJudge .HotJudgeList1>li  .pingwei-box{
+    width: 100px;
+    height: 74px;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 50%;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-radius:6px 6px 0 0;
+    box-sizing: border-box;
+   transform: translateX(-50%);
+    transition: .3s all;
+}
+.HotJudge .HotJudgeList1>li:hover .pingwei-box{
+    top: 0px;
+}
+.HotJudge .HotJudgeList1>li  .pingwei-box >div{
+    width: 100px;
+    height: 60px;
+    background-image: url("../img/allLogo2019.png");
+    background-repeat: no-repeat;
+    margin-top: 20px;
+}
+.pingwei-box  .tengxun{
+    background-position: -3px -2px;
+}
+.pingwei-box .kuaikan{
+    background-position: 1px -62px;
+}
+.pingwei-box .wangyi{
+    background-position: -4px -123px;
+}
+.pingwei-box .UC{
+    background-position: 2px -188px;
+}
+.pingwei-box .kemiku{
+    background-position: -3px -243px;
+}
+.pingwei-box .mankezhan{
+    background-position: -2px -364px;
+}
+
+.pingwei-box .zhangyue{
+    background-position: -1px -425px;
+}
+.pingwei-box .maimeng{
+    background-position: -2px -300px;
+}
+.pingwei-box .maiji{
+    background-position: -2px -482px;
+}
+.pingwei-box .manben{
+    background-position: -97px 0;
+}
+.pingwei-box .manhuahui{
+    background-position: -99px -62px;
+}
+.pingwei-box .manhuacheng{
+    background-position: -100px -122px;
+}
+
+.pingwei-box .manhuacheng{
+    background-position: -100px -122px;
+}
+
+.pingwei-box .aqy{
+    background-position: -101px -181px;
+}
+.pingwei-box .jy{
+    background-position: -101px -239px;
+}
+.pingwei-box .migu{
+    background-position: -101px -298px;
+}
+.pingwei-box .wangyiyouxi{
+    background-position: -101px -361px;
+}
+.pingwei-box .huyao{
+    background-position: -101px -419px;
+}
+.pingwei-box .yayys{
+    background-position: -100px -481px;
+}
+.pingwei-box .xqbl{
+    background-position: -201px -0px;
+}
+.pingwei-box .zy{
+    background-position: -201px -60px;
+}
+.pingwei-box .ks{
+    background-position: -201px -118px;
+}
+.pingwei-box .lz{
+    background-position: -201px -180px;
+}
+.pingwei-box .mfs{
+    background-position: -201px -240px;
+}
+.pingwei-box .qiaqia{
+    background-position: -201px -300px;
+}
+.pingwei-box .bzd{
+    background-position: -201px -360px;
+}
+
+
+
+
+.HotJudge .HotJudgeList1>li .bdrs-box{
+    width: 124px;
+    height: 124px;
+    border-radius:50%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+.HotJudge .HotJudgeList1>li .bdrs-box:after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 176px;
+    background: #fff;
+    margin: 57px auto 0;
+    border-bottom: 5px solid #fafafa;
+    box-sizing: border-box;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+}
+/*.HotJudge .HotJudgeList>li:last-child{*/
+/*cursor:auto;*/
+/*}*/
+.HotJudge .HotJudgeList>li:not(:last-child):hover{
+
+}
+.HotJudge .HotJudgeList>li:not(:last-child):hover .rightJ{
+    color:#fff;
+}
+.HotJudge .HotJudgeList>li:not(:last-child):hover .rightJ span{
+    color:#fff;
+}
+/*.HotJudge .HotJudgeList>li:nth-of-type(5){*/
+    /*margin-right: 0;*/
+/*}*/
+/*.HotJudge .HotJudgeList>li:nth-of-type(6){*/
+    /*margin-left: 95px;*/
+/*}*/
+.HotJudge .HotJudgeList>li>.left{
+    width: 126px;
+    height: 126px;
+    border-radius:50%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.HotJudge .HotJudgeList>li>.left>img{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    width: 120px;
+    height:auto;
+    border-radius:50%;
+}
+.HotJudge .HotJudgeList>li>.rightJ{
+    float: left;
+    color:#9a9a9a;
+    padding-top: 14px;
+    width: 112px;
+    position: relative;
+}
+.HotJudge .HotJudgeList>li>.rightJ p{
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    line-height: 24px;
+    padding-left: 8px;
+}
+.HotJudge .HotJudgeList>li>.rightJ span{
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    text-align: left;
+    display:inline-block;
+    padding:0 8px;
+    width: 100%;
+    font-weight:700;
+}
+.HotJudge .HotJudgeList>li>.rightJ span.more-img{
+    position: absolute;
+    left:0;
+    top:50px;
+    border:0;
+    display: block;
+    width: 110px;
+}

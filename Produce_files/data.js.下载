@@ -1,0 +1,602 @@
+/**
+ * Created by Administrator on 2019/5/16 0016.
+ */
+var mhName = [
+  {
+    name: [
+      '变成女生了',
+      '费莱安魔法学院',
+      '海妖之恋',
+      '黑天鹅',
+      '后悔药店',
+      '欢喜姻缘',
+      '借我一双慧眼',
+      '君与妾',
+    ],
+  },
+  {
+    name: [
+      '你是我的毒药',
+      '女主有毒',
+      '少年刑案官',
+      '锁深秋',
+      '锁重楼',
+      '桃花源',
+      '顾漫',
+      '王爷的小兔妖',
+    ],
+  },
+  {
+    name: [
+      '妖世情殇',
+      '医然心动',
+      '走开，前女友',
+      '不想做娇妻',
+      '学校有鬼',
+      '古板少爷超会撩',
+      '换皮',
+      '她不是我女神',
+    ],
+  },
+  {
+    name: ['九尾冥恋'],
+  },
+]
+var mhImg = [
+  {
+    url: [
+      './img/mhPic/mh_1.jpg',
+      './img/mhPic/mh_2.jpg',
+      './img/mhPic/mh_3.jpg',
+      './img/mhPic/mh_4.jpg',
+      './img/mhPic/mh_5.jpg',
+      './img/mhPic/mh_6.jpg',
+      './img/mhPic/mh_7.jpg',
+      './img/mhPic/mh_8.jpg',
+    ],
+  },
+  {
+    url: [
+      './img/mhPic/mh_9.jpg',
+      './img/mhPic/mh_10.jpg',
+      './img/mhPic/mh_11.jpg',
+      './img/mhPic/mh_12.jpg',
+      './img/mhPic/mh_13.jpg',
+      './img/mhPic/mh_14.jpg',
+      './img/mhPic/mh_15.jpg',
+      './img/mhPic/mh_16.jpg',
+    ],
+  },
+  {
+    url: [
+      './img/mhPic/mh_17.jpg',
+      './img/mhPic/mh_18.jpg',
+      './img/mhPic/mh_19.jpg',
+      './img/mhPic/mh_20.jpg',
+      './img/mhPic/mh_21.jpg',
+      './img/mhPic/mh_22.jpg',
+      './img/mhPic/mh_23.jpg',
+      './img/mhPic/mh_24.jpg',
+    ],
+  },
+  {
+    url: ['./img/mhPic/mh_25.jpg'],
+  },
+]
+var mhDesc = [
+  {
+    desc: [
+      '原本是男生的苏迪意外变成女生~邂逅了男主宋梦阳，原本坚定喜欢女生的苏迪在宋梦阳不断攻击下喜欢上了他......',
+      '坐落与大陆中心的魔法学院中那些纠葛与纷争，从底端攀爬的伤与痛。',
+      '世人称我们为美人鱼，却不知我们是会吃人的海妖，然而遇见他让我甘心改变自己，化身为人…',
+      '你不曾了解没有眼泪的悲伤...高冷的面具下藏匿的寂寞，孤傲少女是否能蜕变成真正的天鹅？',
+      '只要你带着悔意来到后悔药店——你一定会见到这家店的主人。而她，会让你所后悔的事情发生改变……',
+      '一场缘于女扮男装替兄成亲而促成的欢喜姻缘。',
+      '很多陷入感情的人，无论热恋还是已经成家立业，都会用自己的方式去证明对方是否爱自己，问的比较多的问题无非也是你爱我吗？倘若，我能有双看透忠贞与否的眼睛……',
+      '当岐黄之术天赋异禀的她，遇上娇弱病残的他，会牵扯出一些怎样的故事？',
+    ],
+  },
+  {
+    desc: [
+      '苏洛泽第一次见到白小璃的时候就知道她是他的唯一……',
+      '祈墨弋是万年女二，重生复仇，誓死不再重蹈覆辙。冉悠悠是现代百合腐女，一朝穿越成为校园玛丽苏女主角。誓死……扑倒女二号。',
+      '少年县令屡破奇案，以惩恶扬善伸张正义为己任，然而更大的疑云在等待着他…',
+      '总有一些痴情女子，以为看到了上位者的孤独与寂寞，而不惜亲身去飞蛾扑火。殊不知，君王真心，价值几何。',
+      '貌美如花的女寨主这天突然扛了个男人回来，却没想到这一生都将受他牵绊…',
+      '桃花源 里面的人与我们不同，它们各个都有着魔法和自己家族的使命。没有任何功名利禄，就是那么简简单单的。但是有一条是他们世代传下来的规矩！——不能让外面世界的人知道他们的存在，不然会面临灭顶之灾！ 梅是桃花源的一名少女，一次与自己的青梅竹马澜因一时贪玩溜出桃花源。到达了民国时代遇见了当时黑帮老大徐柏青，他们相遇相知相恋，却不知道这段恋情在一步一步引他们走向深渊。 当被遗忘的秘密逐渐被解开，恨与爱的纠葛，他们将何去何从？',
+      '繁华都市背后的暗流涌动，感情不过是逢场作戏。若我交付了真心，是否能得到你的回应？',
+      '迟迟化不出人形兔妖春莹，被一道惊天霹雳给开了挂，傻兔有傻福地修得人形，却也因此流落人间，遇见逗比九王爷。',
+    ],
+  },
+  {
+    desc: [
+      '人界与妖魔界对立的背景下，两段跨越种族的情缘，历经生死，为爱成魔，可会换来善果？',
+      '时隔多年，再遇少女时期心动男神！原来隔了这么久，我也依然为你心动！',
+      '“我和你在一起是因为你和我前女友很像……”婚礼前三天，知道真相的我眼泪掉下来……',
+      '姐凭实力单身，你管不着！ 穿越后的林璐不再想谈恋爱，更不想踏入婚姻的坟墓，于是一改前世的懦弱，换上了一副冷酷无情，六亲不认的外表，挡住了家里的催婚，挡退了她的追求者，她要凭自己的实力去做一只自由自在的单身狗。 　　但霄晨阳却对她的冷漠视而不见，依旧乐此不彼地对她软磨硬泡，他觉得没有捂不化的冰块。 　　于是，这两个人开始了一场你追我躲的爱情游戏，到底谁会是游戏的赢家……？',
+      '不给好好读书么？这学校有毒…… 千年前人鬼两族签订的和平制约岌岌可危。 姜言希邂逅神秘少年墨夜，灵异之事不断发生，这到底是巧合还是阴谋？',
+      '要我赔一亿？没门儿！',
+      '由内而外溃烂的究竟是面容还是人心',
+      '丑女注定要逆袭。',
+    ],
+  },
+  {
+    desc: [
+      '一场阴谋，让世界第一杀手霞艳背叛了深爱她的黑道霸主北夜泠轩，北夜泠轩由爱生恨下令活捉霞艳。可他不知道，霞艳身中蛊毒活不过2年…… 因为爱着他，霞艳决定隐瞒实情，并且让北夜泠轩重新爱上自己。',
+    ],
+  },
+]
+var mhLink = [
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558418829#/group/908445',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558418862#/group/3330383',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558418893#/group/1230907',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558418910#/group/1818464',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3330840',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/1559389',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3339271',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3331301',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3317537',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3317060',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/2555485',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/675656',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/1136935',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/2586581',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/2586581',
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=20190318#/tuyao?serial=3978834&mode=PRODUCTION',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3208556',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/796813',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/3329597',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558421770#/group/9049243',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558421862#/group/8750632',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558422465#/group/9052429',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558422493#/group/8942406',
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1558422536#/group/7190029',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/2864418',
+    ],
+  },
+]
+
+var mjName = [
+  {
+    name: [
+      '公主万安【有声】',
+      '余清欢',
+      '神棍俏帝妃（宫斗）',
+      '社会主义核心价值观故事集',
+    ],
+  },
+  {
+    name: ['泪花瘾', '我家王爷不搞事', '御天令', '拂晓之泪【有声】'],
+  },
+  {
+    name: ['恋爱禁止【有声】', '王爷的小兔妖', '我的“傻萌”妹妹', '逆袭时尚圈'],
+  },
+  {
+    name: ['魔帝囚妃', '冰之花滑', '倾城谋妃Ⅰ', '来自地狱的群聊'],
+  },
+
+  {
+    name: ['深夜', '劫·情动三生', 'DAO：梦想与誓约', '出道，拜托了！'],
+  },
+  {
+    name: ['无限危机Ⅱ:病毒'],
+  },
+]
+var mjImg = [
+  {
+    url: [
+      './img/mjPic/mj_1.jpg',
+      './img/mjPic/mj_2.jpg',
+      './img/mjPic/mj_3.jpg',
+      './img/mjPic/mj_4.jpg',
+    ],
+  },
+  {
+    url: [
+      './img/mjPic/mj_5.jpg',
+      './img/mjPic/mj_6.jpg',
+      './img/mjPic/mj_7.jpg',
+      './img/mjPic/mj_8.jpg',
+    ],
+  },
+  {
+    url: [
+      './img/mjPic/mj_9.jpg',
+      './img/mjPic/mj_10.jpg',
+      './img/mjPic/mj_11.jpg',
+      './img/mjPic/mj_12.jpg',
+    ],
+  },
+  {
+    url: [
+      './img/mjPic/mj_13.jpg',
+      './img/mjPic/mj_14.jpg',
+      './img/mjPic/mj_15.jpg',
+      './img/mjPic/mj_16.jpg',
+    ],
+  },
+
+  {
+    url: [
+      './img/mjPic/mj_17.jpg',
+      './img/mjPic/mj_18.jpg',
+      './img/mjPic/mj_19.jpg',
+      './img/mjPic/mj_20.jpg',
+    ],
+  },
+  {
+    url: ['./img/mjPic/mj_21.jpg'],
+  },
+]
+var mjDesc = [
+  {
+    desc: [
+      '我的公主，万福金安',
+      '为你屠戮天下，负尽苍生！',
+      '性转皇帝变成女人强吻神棍假秀女？！神棍褚大忽悠本想找到母亲共享天伦，却意外撞见“妖孽”皇帝的秘密，抢走初吻不说，还甜宠威胁追爱，卷入一场又一场“神的旨意”的宫斗中，装神弄鬼笑到最后，谁说忽悠不入流，宫斗神棍可是认真的！',
+      '社会主义核心价值观是追求真善美的价值观，而弘扬真善美、树立正确导向、倡导正能量是我们必须去实践的。触漫小可爱们应该自觉做良好道德风尚的建设者，做社会文明进步的推动者。倡导正能量，创作真善美的故事作品，大家一起来弘扬五四精神，做社会主义核心价值观的践行者吧！青春拥有正能量，协力演绎中国梦！',
+    ],
+  },
+  {
+    desc: [
+      '命相克，莫相见。心相印，莫相恋。终不悔，情难断，泪成瘾。',
+      '南玄国第一丑女和废物九王爷喜结连理，可喜可贺，两个人一个蠢胖痴傻一个丑陋残废简直绝配！强强联手教你做人！她生于医学世家，却被迫沦为冰冷杀器，身陷险境自我了断，只愿来生能游遍名山大川，怎料奈何桥头，阿鼻地狱不收残魂，一朝穿越蠢胖痴傻竟然又是绑架撕票。他半部面具遮面隔情，一生杀伐果决，怎料心尖唯一一处殷红被她占据。',
+      '化为囚徒的人类，剑指天地的暗裔，为存活的觉醒，为自由的战争，这是一场生命的博弈，无数的死亡融汇成天宇之下的狂潮。铁蹄之下，烽烟四起…',
+      '种种不幸不断发生在少女身上，无尽的黑暗不断吞噬着少女的意识，被血包围的身躯，劫恶的命运，不屈的灵魂，而摆在她面前的选择只有两个，堕落、挣扎，她会如何选择？',
+    ],
+  },
+  {
+    desc: [
+      '当新娘忘记了新郎，当新郎寻找消失了的新娘，他们，最终的结果是？',
+      '蠢萌小兔妖误入人间，找到风流王爷报当年的救命之恩。Excuse me？我是来报恩的，不是来卖萌的！喂喂喂，不要咬我啊——说好的这只兔子不能吃！',
+      '这么纯天然又无公害的“傻萌”妹妹，三大种族都hold不住，你能hold得住吗？',
+      '看含冤的珠宝设计师华丽逆袭与霸道总裁相爱相杀！她曾是国际知名的设计师却被污蔑“抄袭”，遭人谋杀，身败名裂！三年后，为还自己清白，她整容重生于世，她发誓要让陷害她的人，付出代价！',
+    ],
+  },
+  {
+    desc: [
+      '影后龙伊与自家总裁唐墨朝本来过着甜蜜的隐婚生活。然而一场意外事故，龙伊穿越到了数千年前的东灵国，重生为东灵国龙家三小姐龙伊伊，还遇上和前男友长得一样的风墨朝!',
+      '伊筱是个热爱花滑的少女，最大的梦想就是成为花滑明星，但是她的母亲却并不同意，从小没有父亲的她对母亲极其孝顺，只好忍痛放弃梦想，而就在这时，花滑男神——艾维斯意外出现在她的生活中，他的出现，是否会令伊筱重拾梦想……(内有私设，与正常的花滑运动可能不大相同)',
+      '丞相家三小姐逃婚在外，误入战场，救亲王，收美男，献计谋，成就倾世姻缘。',
+      '林依失去了她心爱的小猫，在最伤心的时刻捡到了一部手机？手机里一个未知短信：“想要救活它吗？”',
+    ],
+  },
+  {
+    desc: [
+      '如果天总也不亮，那就摸黑过生活； 如果发出声音是危险的，那就保持沉默。',
+      '本以为情劫好过，却不曾想过，如若好过，又何必称之为劫？',
+      '白佳仁、李羽凌、顾熙出道之后，当然是少不了各种巡演、代言活动，然而我们都知道，娱乐圈不简单……面对同行竞争，他们是否能保持初心，成为大众所期待所喜爱的偶像呢？',
+      '充满活力的7位偶像练习生，努力地挥洒着汗水，霸道总裁、可爱小奶狗、温油暖男……你会pick谁？为你喜欢的小哥哥打call吧！成为他们偶像之路最坚实的后盾！',
+    ],
+  },
+  {
+    desc: [
+      '答应我，不要轻易说出你的誓言，无论是对我还是对他。请你一定要活到最后。我，会在终点等你凯旋。',
+    ],
+  },
+]
+var mjLink = [
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422598&token=1779c364e2147c7a729641b78cedc896bd&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422672&token=01c86c7465b6454ba096b7f88a51376dce&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422696&token=3664b7c991cde181e9aa065ddcf8fc9134&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422735&token=1019b36638f70decc1880e626bbd08da80&mode=PRODUCTION',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/comicShare/index.html?time=1552985834#/catolog/7457670',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422762&token=066a50fc8db55d8aae49c3890239b1f818&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=20181229#/ytl?serial=3032034&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422791&token=5319c00e793cb2197e2a325b0ccd572580&mode=PRODUCTION',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422825&token=39a0dd7cd68e5283c586d62d13b62cf973&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=20190318#/tuyao?serial=3978834&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422851&token=179c5af53c82d3fdf0b51221b659889669&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422872&token=36bee96de594c4a3f061c0dbceb33c5fd9&mode=PRODUCTION',
+    ],
+  },
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=1553768952#/modi?serial=2721668&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422898&token=3509e374618ec27747893ac68080dd545e&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558422931&token=36aa4d04a0d99526b89c948c202ebded50&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558423036&token=60c7890cc8dacb5723a18bb0ec1d666f16&mode=PRODUCTION',
+    ],
+  },
+
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558423060&token=39da2a1de4b019095ec63d826d22933852&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558423085&token=538949f2e0acb68e1e752576aca3b89deb&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=20190328#/DAO?serial=3016699&mode=PRODUCTION',
+      'https://qnp.chumanapp.com/m/chumanIdol/index.html?timestamp=1553768878#/pursue?serial=501377&user=MzIzMjU2MzA=&mode=OFFICIAL',
+    ],
+  },
+
+  {
+    link: [
+      'https://qnp.chumanapp.com/m/chumanAVG/index.html?timestamp=1558423111&token=0165e4144ff5b1b9841867a0778fee91bf&mode=PRODUCTION',
+    ],
+  },
+]
+
+var gfVideoTitle = [
+  {
+    title: [
+      '触漫学堂第1课——故事创作导论',
+      '触漫学堂第2课——故事创作：戴着脚镣跳舞',
+      '触漫学堂第3课——叙事角度的选择',
+      '触漫学堂第4课——漫画创作导论',
+      '触漫学堂第5课——漫画的仓鼠理论',
+      '触漫学堂第6课——什么是景别',
+      '触漫学堂第7课——什么是景深',
+      '触漫学堂第8课——故事的时间设定',
+    ],
+  },
+  {
+    title: [
+      '触漫学堂第9课——故事的空间设定',
+      '触漫学堂第10+11课 世界观的设定',
+      '触漫学堂第12课——期限',
+      '触漫学堂第13集——漫画的格式',
+      '触漫学堂第14课——人物创作导论',
+      '触漫学堂第15课——人设：辨识度',
+      '触漫学堂第16集——人设：头身比',
+      '触漫学堂第18课——故事的结构II（待审）',
+    ],
+  },
+  {
+    title: [
+      '触漫学堂第19课——什么是分镜',
+      '触漫学堂第20课——故事的矛盾设定',
+      '触漫学堂第21+27课——空杯方法论的人物设置练习',
+      '触漫学堂第23课——一句话概要',
+      '触漫学堂第24课——人物弧光I',
+      '触漫学堂第25课——人物弧光II',
+      '触漫学堂第26课——透视概念',
+      '触漫学堂第28课——漫画分镜格式',
+    ],
+  },
+  {
+    title: [
+      '触漫学堂第29课——分镜视角',
+      '触漫学堂第30课——角色的情感投射',
+      '触漫学堂第31课——条漫分镜的张力',
+      '触漫学堂第32课——分镜节奏',
+      '触漫学堂第33课故事的情节冲突',
+      '触漫学堂第34课——故事的人物冲突',
+    ],
+  },
+]
+var gfVideoPic = [
+  {
+    src: [
+      './img/gfspfm/1.jpg',
+      './img/gfspfm/2.jpg',
+      './img/gfspfm/3.jpg',
+      './img/gfspfm/4.jpg',
+      './img/gfspfm/5.jpg',
+      './img/gfspfm/6.jpg',
+      './img/gfspfm/7.jpg',
+      './img/gfspfm/8.jpg',
+    ],
+  },
+  {
+    src: [
+      './img/gfspfm/9.jpg',
+      './img/gfspfm/10+11.jpg',
+      './img/gfspfm/12.jpg',
+      './img/gfspfm/13.jpg',
+      './img/gfspfm/14.jpg',
+      './img/gfspfm/15.jpg',
+      './img/gfspfm/16.jpg',
+      './img/gfspfm/18.jpg',
+    ],
+  },
+  {
+    src: [
+      './img/gfspfm/19.jpg',
+      './img/gfspfm/20.jpg',
+      './img/gfspfm/21+27.jpg',
+      './img/gfspfm/22.jpg',
+      './img/gfspfm/23.jpg',
+      './img/gfspfm/24.jpg',
+      './img/gfspfm/25.jpg',
+      './img/gfspfm/26.jpg',
+    ],
+  },
+  {
+    src: [
+      './img/gfspfm/28.jpg',
+      './img/gfspfm/29.jpg',
+      './img/gfspfm/30.jpg',
+      './img/gfspfm/31.jpg',
+      './img/gfspfm/32.jpg',
+      './img/gfspfm/33.jpg',
+      './img/gfspfm/34.jpg',
+    ],
+  },
+]
+var gfVideoUrl = [
+  {
+    url: [
+      'https://qnp.chumanapp.com/chumanOfficialVideo/1.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/2.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/3.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/4.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/5.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/6.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/7.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/8.mp4',
+    ],
+  },
+  {
+    url: [
+      'https://qnp.chumanapp.com/chumanOfficialVideo/9.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/10+11.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/12.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/13.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/14.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/15.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/16.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/18.mp4',
+    ],
+  },
+  {
+    url: [
+      'https://qnp.chumanapp.com/chumanOfficialVideo/19.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/20.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/21+27.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/22.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/23.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/24.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/25.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/26.mp4',
+    ],
+  },
+  {
+    url: [
+      'https://qnp.chumanapp.com/chumanOfficialVideo/28.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/29.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/30.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/31.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/32.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/33.mp4',
+      'https://qnp.chumanapp.com/chumanOfficialVideo/34.mp4',
+    ],
+  },
+]
+
+var userVideoTitle = [
+  {
+    title: [
+      '如何在漫剧之中制作动画一样的字幕效果！',
+      '《出道，拜托了》出道曲《D.A.O》MV',
+      '【洛凡书小课堂】用触漫做侧脸人物',
+      '【洛凡书小课堂】用触漫做带有自定义的精美校园封面',
+      '如何不用P图也可以改人物嘴型^O^',
+      '【简单封面小教程】ｸﾞｯ!✧',
+      '【简单素锦封】因为时间不够所以没有把擦完之后的全部录下来，每个字擦一两画就行，然后就做好啦ᙏ̤̫͚',
+      '【颜像立体字】接上个视频',
+    ],
+  },
+  {
+    title: [
+      '原谅我渣渣的技术，做视频做了好久唉🌚，后面可以跳过😂然后还想学什么下方留言，如果我会的我就录教程',
+      '因为时间太短，所以比较简洁。完全版可以私聊我',
+      '如何简单制作画面光效(无需p图)',
+      '星空√ 发光图层每个软件效果都不太一样，做一些微调就可以ヘ(￣ω￣ヘ)♪ 字丑可能看不懂😂😂😂',
+      '简单易懂的动作变换',
+      '【染湘渣画-日常篇4】撸了一个泳装小姐姐，好像花了五、六个小时(ヽ´ω`)按照惯例，求约稿！！',
+      '超级简单的字效教程需要ps软件就可以了',
+      '〔闪电教程〕背景倒置两长页连接，情感推动up!',
+    ],
+  },
+  {
+    title: [
+      '〔闪电教程〕晨昏效果制作',
+      '口胡了……今天感冒见谅。然后如果反应好下一次再出教程哦',
+      'P图软件：picsart美易 抠图软件：proknockout ♡',
+      '这个教程是教不会指写的人，软件名叫MediBang，希望你们能学会，等会我发渐变指写怎么做。',
+      '【本式课堂】 第一课:如何用触漫素材改变人物瞳色 (*ﾟｪﾟ*)有些字没咬清楚很抱歉昂qwq',
+      '解决漫剧自制图中遇到的小问题技巧',
+      '字设的教程',
+      '画个同人大头~ 这个是给若妈的同人',
+    ],
+  },
+]
+var userVideoUrl = [
+  {
+    url: [
+      'http://qnv.chumanapp.com/app/school/video/school_video_336992_f4813001b0784d6f9e8bd3a08ef3393d.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_30120842_ef638a0e69314ce9996eee92787f4f9e.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_16010881_e70d3c281af34aafa0b8488443d89bc9.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_16010881_4078e5032f9842a0ad268c89c31adf1f.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_1064274_c455b99764164e8481c68ce9ebd14b81.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_4006286_6d430aac109c45d995fc426443411ce2.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_1499452_7d6f06e405c640499007b03c1d747359.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_7926906_f5acda8659264c449d1b5801c2068c3d.mp4',
+    ],
+  },
+  {
+    url: [
+      'http://qnv.chumanapp.com/app/school/video/school_video_34919769_8f5425a81db847ddb14fdff217b5279f.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_4952229_88efdee21ac240889b6e6c1aa59494ef.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_11052576_3f0f1a034f0e49c9849d3cd0c832952d.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_1518905_7d335026df6f427a9ec3a25f15e90c9d.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_29065425_5f235fd220d3449e8cb770e8b17408db.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_3558575_8ebd4d9208ca407282f2d8a95ea4736b.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_8872371_72b82256c4a8495bb27b4f91dd3b393b.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_1662501_690429a9995a47aaa24bbd67fff146cd.mp4',
+    ],
+  },
+  {
+    url: [
+      'http://qnv.chumanapp.com/app/school/video/school_video_1662501_ac5238ee751d450f9b3515dc9eb5023a.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_4816664_1572df4d156344aaaaf38449887a8348.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_3391802_0278041ab51a0f93b9817202e8f9a3ae.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_2173361_1dbbe9b4a5e8edb3d8ba5466ab79dea6.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_2091676_c0e6aa65e86948a291d1b7f44f5d186f.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_4005976_57ccccfa00884cab8ba20761d97e43ee.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_30971051_47f49fe38bca4494b3c4232adf0ae4f3.mp4',
+      'http://qnv.chumanapp.com/app/school/video/school_video_1518905_d786e0ebab244d37af128105110fa863.mp4',
+    ],
+  },
+]
+var userVideoPic = [
+  {
+    src: [
+      './img/yhspPic/1.png',
+      './img/yhspPic/2.png',
+      './img/yhspPic/3.png',
+      './img/yhspPic/4.png',
+      './img/yhspPic/5.png',
+      './img/yhspPic/6.png',
+      './img/yhspPic/7.png',
+      './img/yhspPic/8.png',
+    ],
+  },
+  {
+    src: [
+      './img/yhspPic/9.png',
+      './img/yhspPic/10.png',
+      './img/yhspPic/11.png',
+      './img/yhspPic/12.png',
+      './img/yhspPic/13.png',
+      './img/yhspPic/14.png',
+      './img/yhspPic/15.png',
+      './img/yhspPic/16.png',
+    ],
+  },
+  {
+    src: [
+      './img/yhspPic/17.png',
+      './img/yhspPic/18.png',
+      './img/yhspPic/19.png',
+      './img/yhspPic/20.png',
+      './img/yhspPic/21.png',
+      './img/yhspPic/22.png',
+      './img/yhspPic/23.png',
+      './img/yhspPic/24.png',
+    ],
+  },
+]
