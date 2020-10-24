@@ -1,0 +1,267 @@
+/*pc*/
+.pcBody{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.pcBody .bannerBox{
+    width: 100%;
+    height: auto;
+    /*background: url("../img/pic_bg.jpg")no-repeat;*/
+    background-size: 100%;
+    position: relative;
+}
+.bannerBox >img.bannerBg{
+    width: 100%;
+    height: auto;
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left: 0;*/
+}
+.bannerBox >img.yun{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom:-6%;
+    left: 0;
+    z-index: 999;
+}
+.pcBody .bannerBox .bannerContent{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.pcBody .bannerBox .bannerContent .bannerShow{
+    width: 37.6%;
+    height: auto;
+    /*background: url("../img/phone.png")no-repeat;*/
+    /*background-size: 100%;*/
+    position: absolute;
+    top: 11%;
+    left: 13%;
+    z-index: 998;
+}
+.bannerShow >img{
+    width: 100%;
+    height: auto;
+}
+.pcBody .bannerBox .bannerContent .downLoadShow{
+    width: 27.7%;
+    height:auto;
+    position: absolute;
+    top:17%;
+    right: 20%;
+}
+.lunboBox{
+    /*width: 18.5%;*/
+    /*height: 69.5%;*/
+    /*background: #5f5999;*/
+    /*position: absolute;*/
+    /*left: 25.6%;*/
+    /*top: 20.22%;*/
+    width: 17.5%;
+    height: 65.5%;
+    background: #5f5999;
+    position: absolute;
+    left: 25.6%;
+    top: 20.22%;
+}
+.videobBox{
+    width: 100%;
+    height: 100%;
+}
+.videobBox video{
+    width: 100%;
+    height: 100%;
+}
+.lunboBox .swiper-container{
+    width: 100%;
+    height: 100%;
+}
+.lunboBox .swiper-container .swiper-slide{
+    background: #fc6970;
+}
+.swiper-slide >img{
+    width: 100%;
+    height: auto;
+}
+.bannerContent .androidBtn{
+    width: 10.4%;
+    height: auto;
+    position: absolute;
+    right: 35.6%;
+    bottom: 16.3%;
+    cursor: pointer;
+    z-index: 1000;
+}
+.androidBtn >img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.androidBtn >img:hover{
+    opacity: .9;
+}
+.bannerContent .iosBtn{
+    width: 10.4%;
+    height: auto;
+    position: absolute;
+    right: 21.6%;
+    bottom: 16.3%;
+    cursor: pointer;
+    z-index: 1000;
+}
+.iosBtn >img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.iosBtn >img:hover{
+    opacity: .9;
+}
+.downLoadShow >img{
+    width: 100%;
+    height: auto;
+}
+.pcBody .tabBox{
+    width: 100%;
+    height: auto;
+
+}
+.pcBody .tabBox .czsq_box{
+    width: 100%;
+    height: 760px;
+    background: #fff;
+    overflow: hidden;
+}
+.pcBody .tabBox .czsq_box .czsqContent{
+    width: 1000px;
+    height: 760px;
+    margin:0 auto;
+}
+.czsqBox{
+    float: left;
+    width: 486px;
+    /*height: 100%;*/
+    margin:200px 0 0 0;
+}
+.czsqContent >img{
+    float: right;
+    margin:85px 114px 0 0;
+}
+.czsqBox >img{
+    width: 249px;
+    height: 59px;
+    margin:0 auto 45px;
+    display: block;
+    float: right;
+
+}
+.czsqBox >p{
+    width: 100%;
+    overflow: hidden;
+    text-align: right;
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.mxzz_box{
+
+}
+.pcBody .tabBox .ydbb_box ,.mxzz_box,.scjy_box{
+    width: 100%;
+    height: 800px;
+}
+.pcBody .tabBox .ydbb_box{
+    background: #f3f9fd;
+}
+.pcBody .tabBox .scjy_box{
+    background: #f3f9fd;
+}
+.ydbbContent{
+    width: 1000px;
+    height: 100%;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.ydbbContent >img.yd{
+    width: 247px;
+    height: 59px;
+    margin: 75px auto 20px;
+    display: block;
+}
+
+.ydbbContent >p{
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+.ydbbContent .yc{
+    width: 1036px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.mxzzContent{
+    width: 1000px;
+    height: 100%;
+    margin:0 auto;
+
+}
+.mxzzContent >img{
+    float: left;
+    margin:105px 0 0 20px;
+}
+.mxzzBox{
+    float: left;
+    margin-left: 110px;
+}
+.mxzzBox >p{
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.mxzzPic{
+    width: 247px;
+    height: 59px;
+    margin-top: 227px;
+    margin-bottom: 50px;
+}
+
+
+
+.scjy_box .czsqBox{
+    float: left;
+    width: 510px;
+    height: 100%;
+    margin:200px 0 0 0;
+}
+.scjy_box .czsqContent >img{
+    float: right;
+    margin:85px 20px 0 0;
+}
+.scjy_box .czsqBox >img{
+    width: 246px;
+    height: 59px;
+    margin:0 auto 45px;
+    display: block;
+    float: right;
+
+}
+.scjy_box .czsqBox >p{
+    width: 100%;
+    overflow: hidden;
+    text-align: right;
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
