@@ -1,0 +1,390 @@
+.gfjc {
+  width: 1200px;
+  height: auto;
+  margin: 70px auto 0;
+}
+.gfjc .title {
+  /*width: 118px;*/
+  height: 43px;
+  /*background: url("../img/gfjc@2x.png")no-repeat;*/
+  /*background-size: 100% 100%;*/
+  margin: 70px auto 30px;
+  position: relative;
+}
+.gfjc .title > span {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gfjc .title > span:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 4px;
+  background: #fc6970;
+  right: 0;
+  bottom: -20%;
+}
+.gfjc .slideBox {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+.gfjc .slideBox .swiper-container {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+.gfjc .slideBox .swiper-slide {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+.gfjc .slideBox .swiper-slide .ImgBox {
+  width: 292px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.gfjc .slideBox .swiper-slide .ImgBox img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gfjc .slideBox .swiper-slide .ImgBox .fade {
+  width: 292px;
+  height: 40px;
+  background: linear-gradient(0deg, rgba(2, 2, 2, 1) 0%, rgba(2, 2, 2, 0) 100%);
+  opacity: 0.7;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 24px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.gfjc .slideBox .swiper-slide .ImgBox .fade .text {
+  font-size: 14px;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.gfjc .slideBox .swiper-slide .ImgBox:nth-of-type(4n) {
+  margin-right: 0;
+}
+.gfjc .slideBox .swiper-button-next {
+  width: 32px;
+  height: 100px;
+  background: url('../img/jiantou_right_nor@2x.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.gfjc .slideBox .swiper-button-next:hover {
+  background: url('../img/jiantou_right_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.gfjc .slideBox .swiper-button-disabled {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 999;
+  pointer-events: auto;
+  display: none;
+}
+.gfjc .slideBox .swiper-button-disabled:hover {
+  background: url('../img/jiantou_right_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.gfjc .slideBox .swiper-button-prev {
+  width: 32px;
+  height: 100px;
+  background: url('../img/jiantou_left_nor@2x.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+.gfjc .slideBox .swiper-button-prev:hover {
+  background: url('../img/jiantou_left_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.gfjc .slideBox .swiper-button-disabled:hover {
+  background: url('../img/jiantou_left_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.gfjc .slideBox .swiper-button-disabled {
+  opacity: 1;
+  z-index: 999;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.yhsp {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto 60px;
+}
+.yhsp .title {
+  /*width: 118px;*/
+  height: 43px;
+  /*background: url("../img/thsp@2x.png")no-repeat;*/
+  /*background-size: 100% 100%;*/
+  margin: 70px auto 30px;
+  position: relative;
+}
+.yhsp .title > span {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.yhsp .title > span:before {
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 4px;
+  background: #fc6970;
+  right: 0;
+  bottom: -20%;
+}
+.yhsp .slideBox {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+.yhsp .slideBox .swiper-container {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+  margin-bottom: 70px;
+}
+.yhsp .slideBox .swiper-slide {
+  width: 1200px;
+  height: 380px;
+  position: relative;
+}
+.yhsp .slideBox .swiper-slide .ImgBox {
+  width: 292px;
+  height: 180px;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.yhsp .slideBox .swiper-slide .ImgBox img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.yhsp .slideBox .swiper-slide .ImgBox .fade {
+  width: 292px;
+  height: 40px;
+  background: linear-gradient(0deg, rgba(2, 2, 2, 1) 0%, rgba(2, 2, 2, 0) 100%);
+  opacity: 0.7;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 24px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.yhsp .slideBox .swiper-button-disabled {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 999;
+  pointer-events: auto;
+  display: none;
+}
+.yhsp .slideBox .swiper-slide .ImgBox .fade .text {
+  font-size: 14px;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  width: 95%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.yhsp .slideBox .swiper-slide .ImgBox:nth-of-type(4n) {
+  margin-right: 0;
+}
+.yhsp .slideBox .swiper-button-next1 {
+  width: 32px;
+  height: 100px;
+  background: url('../img/jiantou_right_nor@2x.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
+}
+.yhsp .slideBox .swiper-button-prev1 {
+  width: 32px;
+  height: 100px;
+  background: url('../img/jiantou_left_nor@2x.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
+}
+.yhsp .slideBox .swiper-button-next1:hover {
+  background: url('../img/jiantou_right_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.yhsp .slideBox .swiper-button-prev1:hover {
+  background: url('../img/jiantou_left_pre@2x.png') no-repeat;
+  background-size: 100% 100%;
+}
+.ab_box {
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.closeBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.ab_box .videoBox {
+  width: 1200px !important;
+  height: 755px !important;
+  position: absolute;
+  left: 50%;
+  top: 7%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.ab_box #myVideo {
+  width: 1200px !important;
+  height: 675px !important;
+  /*position: absolute;*/
+  /*left: 50%;*/
+  /*top:10%;*/
+  /*transform: translateX(-50%);*/
+}
+@media screen and (max-height: 800px) {
+  .ab_box #myVideo {
+    width: 800px !important;
+    height: 450px !important;
+  }
+  .ab_box .videoBox {
+    width: 800px !important;
+    height: 498px !important;
+  }
+}
+
+.ab_box .title {
+  font-size: 30px;
+  font-family: FZLTCHK--GBK1-0;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 48px;
+  margin-bottom: 19px;
+  display: inline-block;
+}
+.ab_box .video-js .vjs-play-progress {
+  background: #fc6970;
+}
+.ab_box .video-js .vjs-big-play-button:before,
+.video-js .vjs-play-control:before,
+.vjs-icon-play:before {
+  content: '' !important;
+}
+.vjs-volume-menu-button {
+  display: none;
+}
+.ab_box .video-js .vjs-play-control.vjs-paused {
+  width: 16px;
+  height: 16px;
+  background: url('../img/play.png') no-repeat;
+  background-size: 100% 100%;
+  margin: 10px;
+}
+.ab_box .video-js .vjs-play-control.vjs-playing {
+  width: 16px;
+  height: 16px;
+  background: url('../img/btn_zanting.png') no-repeat;
+  background-size: 100% 100%;
+  margin: 10px;
+}
+.video-js .vjs-play-control.vjs-playing,
+.vjs-icon-pause {
+  content: '' !important;
+  width: 16px;
+  height: 16px;
+  margin: 10px;
+}
+
+.ab_box .video-js .vjs-fullscreen-control:before,
+.vjs-icon-fullscreen-enter:before {
+  content: '' !important;
+  width: 16px;
+  height: 16px;
+  background: url('../img/btn_fangda@2x.png') no-repeat;
+  background-size: 100% 100%;
+  margin: 10px;
+}
+
+.ab_box .vjs-big-play-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.ab_box .vjs-big-play-button:before {
+  content: '' !important;
+  width: 16px;
+  height: 16px;
+  background: url('../img/play.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
