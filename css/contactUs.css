@@ -1,0 +1,122 @@
+.contactContent {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 980px;
+  height: auto;
+  margin: 0 auto;
+}
+.left_content {
+  width: 600px;
+}
+.txtTab {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #222;
+  border-bottom: 4px solid #fbfbfb;
+  /*font-weight: bold;*/
+  padding-top: 15px;
+}
+.content .map_pic {
+  width: 500px;
+  height: 300px;
+  margin: 0 0 60px 0;
+  padding: 0 0 30px 20px;
+}
+.tabIcon {
+  width: 4px;
+  height: 20px;
+  background: #fc6970;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: -3px;
+  margin-right: 10px;
+}
+.left_content .text {
+  font-size: 16px;
+  color: #666666;
+  padding: 30px 0 30px 20px;
+}
+.left_content .text > p {
+  height: 40px;
+  line-height: 40px;
+}
+.left_content .IconList {
+  width: auto;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.left_content .IconList li {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 60px;
+  cursor: pointer;
+}
+.left_content .IconList li.weixin {
+  background: url('../img/icon_wechat_nor.png') no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+.left_content .IconList li.weixin .erweima {
+  width: 136px;
+  height: 146px;
+  position: absolute;
+  background: url('../img/wechat.png') no-repeat;
+  background-size: 100%;
+  top: -158px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.left_content .IconList li.weixin:hover {
+  background: url('../img/icon_wechat_pre.png') no-repeat;
+  background-size: 100%;
+}
+.left_content .IconList li.weixin:hover .erweima {
+  display: block;
+}
+.left_content .IconList li.weibo {
+  background: url('../img/icon_sina_nor.png') no-repeat;
+  background-size: 100%;
+}
+.left_content .IconList li.weibo:hover {
+  background: url('../img/icon_sina_pre.png') no-repeat;
+  background-size: 100%;
+}
+.left_content .IconList li.QQ {
+  background: url('../img/icon_qq_nor.png') no-repeat;
+  background-size: 100%;
+}
+.left_content .IconList li.QQ a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.left_content .IconList li.QQ:hover {
+  background: url('../img/icon_qq_pre.png') no-repeat;
+  background-size: 100%;
+}
+.applyBtn {
+  width: 180px;
+  height: 50px;
+  background: url('../img/djsqBtn.png') no-repeat;
+  background-size: 100%;
+  display: block;
+  margin-left: 13px;
+}
+.weiquanBtn {
+  width: 180px;
+  height: 50px;
+  background: url('../img/djwqBtn.png') no-repeat;
+  background-size: 100%;
+  display: block;
+  margin-left: 13px;
+}
