@@ -1,0 +1,375 @@
+/*reset start*/
+body,
+html,
+div,
+blockquote,
+img,
+label,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+a,
+fieldset,
+input,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.floatLeft {
+  float: left;
+  padding: 0.5em 0.5em 0.5em 0;
+}
+.floatRight {
+  float: right;
+  padding: 0.5em 0 0.5em 0.5em;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei,
+    sans-serif !important;
+}
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  /*background:url(../images/chuweb.jpg) no-repeat center top;*/
+  /*background-size: cover;*/
+  margin-top: 80px;
+}
+.chuInfo {
+  /*background:url(../images/BG_TOP.png) no-repeat center top;*/
+  background-size: cover;
+}
+body a {
+  text-decoration: none;
+  color: #333;
+  outline: 0;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+/*reset end*/
+.allHeader {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 9999;
+}
+.allHeader .warpNav {
+  /*width: 1000px;*/
+  /*width: 1200px;*/
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.allHeader .warpNav .Logo {
+  width: 302px;
+  height: 32px;
+
+  float: left;
+  margin-top: 24px;
+  cursor: pointer;
+}
+.allHeader .warpNav .Logo img {
+  width: 100%;
+  height: 100%;
+}
+.allHeader .warpNav .navList {
+  float: right;
+}
+.allHeader .warpNav .navList ul {
+  width: auto;
+}
+.allHeader .warpNav .navList ul li {
+  float: left;
+  margin: 0 15px;
+  padding: 0 8px;
+  line-height: 80px;
+}
+.allHeader .warpNav .navList ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.allHeader .warpNav .navList ul li.active {
+  position: relative;
+}
+.allHeader .warpNav .navList ul li.active:before {
+  content: '';
+  width: 60px;
+  height: 4px;
+  position: absolute;
+  background: url('../img/tab.png') no-repeat;
+  background-size: 100%;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.allHeader .warpNav .navList ul li a {
+  color: #222;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  cursor: pointer;
+}
+
+.allBottom {
+  width: 100%;
+  /*height: 225px;*/
+  background: #333333;
+}
+.allBottom .bottomContent {
+  /* width: 900px; */
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #e5e5e5;
+  /* padding-top: 60px; */
+  padding-top: 46px;
+  box-sizing: border-box;
+}
+.allBottom .bottomContent p a {
+  color: #e5e5e5;
+}
+.allBottom .bottomContent .map {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.allBottom .bottomContent .xy {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.allBottom .bottomContent .ys {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/*pc end*/
+/*wap-chu1 start*/
+.bigBody {
+  display: none;
+}
+.bigBody .downloadCon {
+  position: relative;
+}
+.bigBody .downloadCon > img {
+  width: 100%;
+  height: auto;
+}
+.bigBody .downloadCon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.bigBody .downloadCon .downBtn {
+  font-size: 18px;
+  color: #5f5999;
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #a29ecd;
+  border-radius: 80px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  transform: translate(-50%);
+  bottom: 90px;
+  z-index: 2;
+}
+.bigBody .downloadCon .downBtn:active {
+  background-color: #f8f8f9;
+}
+.wap-copyright {
+  color: #9393ad;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  line-height: 20px;
+}
+.wap-copyright p {
+  margin: 0 auto;
+}
+.wap-copyright p > a {
+  color: #9393ad;
+  margin-right: 10px;
+}
+
+.wap-copyright > a {
+  padding: 0 4px;
+  font-size: 14px;
+  color: #9393ad;
+  line-height: 20px;
+}
+.wap-copyright > a.a-sp {
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+.wap-copyright > a.a-sp:active {
+  color: #2576e5;
+}
+.wap-copyright .link-sp,
+.wap-copyright .link-sp > a {
+  margin-top: 5px;
+  color: #727293;
+}
+.wap-copyright .link-sp > a {
+  margin-right: 5px;
+}
+.wap-copyright .link-sp > a:active {
+  color: #2576e5;
+}
+.wap-info {
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+}
+
+.phoneBox {
+  width: 46%;
+  height: 53%;
+  background: url(../img/iphone_2019_1.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.phoneBox #wapVideo {
+  width: 87%;
+  height: 75%;
+  /*background: #fc6970;*/
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#video_wap {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 800px) and (min-width: 644px) {
+  .bigBody .downloadCon .downBtn {
+    height: 80px;
+    line-height: 80px;
+    font-size: 32px;
+    width: 70%;
+    bottom: 13%;
+  }
+
+  .wap-copyright {
+    font-size: 22px;
+    line-height: 32px;
+    top: 90%;
+  }
+  .wap-copyright > a {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+/*wap-chu1 end*/
+.downloadCon .wqzxBtn {
+  width: 40px;
+  height: 42px;
+  background: url('../img/wqzx.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 2;
+}
+.downloadCon .hsrzBtn {
+  width: 40px;
+  height: 42px;
+  background: url('../img/hsrz.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 80px;
+  right: 22px;
+  z-index: 2;
+}
+.downloadCon .rmjzBtn {
+  width: 40px;
+  height: 42px;
+  background: url('../img/rmjz.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 140px;
+  right: 22px;
+  z-index: 2;
+}
