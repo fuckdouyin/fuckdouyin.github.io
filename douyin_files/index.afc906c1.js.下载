@@ -1,0 +1,630 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// install a JSONP callback for chunk loading
+/******/ 	function webpackJsonpCallback(data) {
+/******/ 		var chunkIds = data[0];
+/******/ 		var moreModules = data[1];
+/******/ 		var executeModules = data[2];
+/******/
+/******/ 		// add "moreModules" to the modules object,
+/******/ 		// then flag all "chunkIds" as loaded and fire callback
+/******/ 		var moduleId, chunkId, i = 0, resolves = [];
+/******/ 		for(;i < chunkIds.length; i++) {
+/******/ 			chunkId = chunkIds[i];
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 				resolves.push(installedChunks[chunkId][0]);
+/******/ 			}
+/******/ 			installedChunks[chunkId] = 0;
+/******/ 		}
+/******/ 		for(moduleId in moreModules) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 		}
+/******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
+/******/
+/******/ 		while(resolves.length) {
+/******/ 			resolves.shift()();
+/******/ 		}
+/******/
+/******/ 		// add entry modules from loaded chunk to deferred list
+/******/ 		deferredModules.push.apply(deferredModules, executeModules || []);
+/******/
+/******/ 		// run deferred modules when all chunks ready
+/******/ 		return checkDeferredModules();
+/******/ 	};
+/******/ 	function checkDeferredModules() {
+/******/ 		var result;
+/******/ 		for(var i = 0; i < deferredModules.length; i++) {
+/******/ 			var deferredModule = deferredModules[i];
+/******/ 			var fulfilled = true;
+/******/ 			for(var j = 1; j < deferredModule.length; j++) {
+/******/ 				var depId = deferredModule[j];
+/******/ 				if(installedChunks[depId] !== 0) fulfilled = false;
+/******/ 			}
+/******/ 			if(fulfilled) {
+/******/ 				deferredModules.splice(i--, 1);
+/******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
+/******/ 			}
+/******/ 		}
+/******/
+/******/ 		return result;
+/******/ 	}
+/******/
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded and loading chunks
+/******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 	// Promise = chunk loading, 0 = chunk loaded
+/******/ 	var installedChunks = {
+/******/ 		16: 0
+/******/ 	};
+/******/
+/******/ 	var deferredModules = [];
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "https://s3.bytecdn.cn/ies/fe_app_new/";
+/******/
+/******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
+/******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+/******/ 	jsonpArray.push = webpackJsonpCallback;
+/******/ 	jsonpArray = jsonpArray.slice();
+/******/ 	for(var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+/******/ 	var parentJsonpFunction = oldJsonpFunction;
+/******/
+/******/
+/******/ 	// add entry module to deferred list
+/******/ 	deferredModules.push([15,0]);
+/******/ 	// run deferred modules when ready
+/******/ 	return checkDeferredModules();
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("1878424adb833cbccc1d");
+
+
+/***/ }),
+
+/***/ "1878424adb833cbccc1d":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _tvcV = __webpack_require__("7437804797c5c15e669a");
+
+var _tvcV2 = _interopRequireDefault(_tvcV);
+
+var _tea = __webpack_require__("6c84fa149b373f4029bb");
+
+var _tea2 = _interopRequireDefault(_tea);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+__webpack_require__("6e2b4c3825c92aaf464d");
+
+__webpack_require__("fe2bca6be3b9fef944c9");
+
+$(function () {
+  $('#copyYear').text(new Date().getFullYear());
+});
+$('#video-tvc').attr('src', _tvcV2.default);
+var video = $('#video-tvc')[0];
+
+if (~location.hostname.indexOf('iesdouyin')) {
+  $('.gognan-box').remove();
+}
+
+$('.unmute').click(function () {
+  if ($(this).hasClass('mute')) {
+    video.muted = true;
+  } else {
+    video.muted = false;
+  }
+
+  $(this).toggleClass('mute');
+});
+
+_tea2.default.send('page_view', {
+  page_name: 'douyin_pc_index',
+  page_url: location.pathname
+});
+
+/***/ }),
+
+/***/ "6c84fa149b373f4029bb":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _bytedDpEventCollector = __webpack_require__("682c223c8090c9c699fb");
+
+var _bytedDpEventCollector2 = _interopRequireDefault(_bytedDpEventCollector);
+
+var _utils = __webpack_require__("e844fe34c02b3cce5ed3");
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _qs = __webpack_require__("a63b0d047588ea783f61");
+
+var _qs2 = _interopRequireDefault(_qs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var TeaLogger = window.collectEvent || _bytedDpEventCollector2.default;
+var appId = 1243;
+var appName = 'douyin_reflow'; // 可选择开启debug模式。debug模式上报地址为测试服务器（只支持http。测试https需关闭debug模式，上报到线上地址）。
+// collectEvent.setDebug(true);
+// 设置appId。必须配置。
+
+TeaLogger.setAppId(appId); // 设置一些必备的字段。sdk会延时等到这些字段都赋值完毕后，才发送收集的事件。
+// 其中（user_unique_id、app_id）为必须设置的字段，否则服务器会返回失败码。
+// 背景：因为一些字段是异步获取的，所以可能在发送事件之后才赋值。
+
+TeaLogger.setRequiredKeys({
+  user: ['user_unique_id'],
+  header: ['app_id'] // eventCommonParams: ['paramCommon'],
+  // customHeaders: ['flow']
+
+}); // 设置header相关字段
+// headers比较特殊。headers里的key，后续会在处理的时候拿出来与app_id、headers并列。
+
+TeaLogger.setHeader({
+  app_id: appId,
+  app_name: appName,
+  os_name: $.os.android ? 'android' : $.os.ios ? 'ios' : 'unknown',
+  os_version: "".concat($.os.version),
+  traffic_type: $.browser.weixin ? 'weixin' : 'wap'
+}); // 设置通用字段，增加自定义头
+
+TeaLogger.setHeaderHeaders({
+  // url相关
+  href: location.href,
+  host: location.host,
+  pathname: location.pathname,
+  protocol: location.protocol,
+  // 手机信息
+  user_agent: navigator.userAgent,
+  screen_resolution: "".concat(window.screen.width, "*").concat(window.screen.height)
+});
+
+function pick(obj, keys) {
+  return keys.map(function (k) {
+    return k in obj ? _defineProperty({}, k, obj[k]) : {};
+  }).reduce(function (res, o) {
+    return $.extend(res, o);
+  }, {});
+} // 从url获取tea打点必要参数，用于pv、tap事件的上报
+
+
+var list = ['utm_source', 'utm_medium', 'utm_campaign'];
+
+var queryObj = _qs2.default.parse(location.href);
+
+var taeCommonParams = pick(queryObj, list); // 设置通用字段，追加到每次的请求的params里
+
+TeaLogger.setEventCommonParams($.extend({
+  page_url: window.location.href
+}, taeCommonParams)); // 设用户相关信息
+
+TeaLogger.setUser({
+  user_unique_id: _utils2.default.getTTWebId()
+});
+TeaLogger.setIntranetMode(false);
+exports.default = TeaLogger;
+
+/***/ }),
+
+/***/ "6e2b4c3825c92aaf464d":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "7437804797c5c15e669a":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "musics/tvc-v3.d84159ab.mp4";
+
+/***/ }),
+
+/***/ "e844fe34c02b3cce5ed3":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  dateFormat: function dateFormat(timestamp, format) {
+    if (!timestamp) {
+      return;
+    }
+
+    if (typeof timestamp !== 'number') {
+      try {
+        timestamp = Number(timestamp);
+      } catch (error) {
+        throw Error('Expected to be a number.', error);
+      }
+    }
+
+    function zeroize(num) {
+      if (num && typeof num !== 'number') {
+        return;
+      }
+
+      return num < 10 ? "0".concat(num) : num;
+    }
+
+    var date = new Date(timestamp);
+    var format = format || 'YYYY年MM月DD日';
+    var now = Number(new Date());
+    var diff = now - timestamp;
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var hours = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    var _seconds = 1000;
+
+    var _minute = 60 * _seconds;
+
+    var _hours = 60 * _minute;
+
+    var _day = 24 * _hours;
+
+    var formatArray = ['YYYY', 'MM', 'DD', 'H', 'M', 'S'];
+    var dateArray = [year, month, day, hours, minute];
+
+    if (diff > _day * 3) {
+      if (diff < _day * 366) {
+        format = 'MM月DD日';
+      }
+
+      for (var i = 0; i < formatArray.length - 1; i++) {
+        format = format.replace(formatArray[i], dateArray[i]);
+      }
+
+      return format;
+    } else {
+      if (parseInt(diff / _day, 10) >= 1 && parseInt(diff / _day, 10) < 3) {
+        return "".concat(parseInt(diff / _day, 10), "\u5929\u524D");
+      } else if (parseInt(diff / _hours, 10) >= 1) {
+        return "".concat(parseInt(diff / _hours, 10), "\u5C0F\u65F6\u524D");
+      } else if (parseInt(diff / _minute, 10) >= 1) {
+        return "".concat(parseInt(diff / _minute, 10), "\u5206\u949F\u524D");
+      } else {
+        return '刚刚';
+      }
+    }
+  },
+  getUrlParameter: function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1));
+    var sURLVariables = sPageURL.split('&');
+    var sParameterName, i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+        return sParameterName[1] === undefined ? true : sParameterName[1];
+      }
+    }
+  },
+  htmlEntities: function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  },
+
+  /*
+     * 获取url参数
+     */
+  getUrlParam: function getUrlParam(location, name) {
+    var url = location;
+    var splitIndex = url.indexOf('?') + 1;
+    var paramStr = url.substr(splitIndex, url.length);
+    var arr = paramStr.split('&');
+
+    for (var i = 0; i < arr.length; i++) {
+      var kv = arr[i].split('=');
+
+      if (kv[0] == name) {
+        return kv[1];
+      }
+    }
+
+    return '';
+  },
+
+  /*
+     * 设置url参数
+     */
+  setUrlParam: function setUrlParam(location, name, value) {
+    var url = location;
+    var splitIndex = url.indexOf('?') + 1;
+    var paramStr = url.substr(splitIndex, url.length);
+    var newUrl = url.substr(0, splitIndex); // - if exist , replace
+
+    var arr = paramStr.split('&');
+
+    for (var i = 0; i < arr.length; i++) {
+      var kv = arr[i].split('=');
+
+      if (kv[0] == name) {
+        newUrl += "".concat(kv[0], "=").concat(value);
+      } else {
+        if (kv[1] != undefined) {
+          newUrl += "".concat(kv[0], "=").concat(kv[1]);
+        }
+      }
+
+      if (i != arr.length - 1) {
+        newUrl += '&';
+      }
+    } // - if new, add
+
+
+    if (newUrl.indexOf(name) < 0) {
+      newUrl += splitIndex == 0 ? "?".concat(name, "=").concat(value) : "&".concat(name, "=").concat(value);
+    }
+
+    return newUrl;
+  },
+  stopEvent: function stopEvent(event, prevent) {
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    if (prevent !== false) {
+      event.preventDefault();
+    }
+  },
+  setScroll: function setScroll(scrollable, el) {
+    el = el || document;
+
+    if (scrollable) {
+      $(el).off('touchmove');
+    } else {
+      $(el).off('touchmove').on('touchmove', function (e) {
+        this.stopEvent(e);
+      });
+    }
+  },
+  initScrollEvents: function initScrollEvents(offset, debounce) {
+    var scrollEndTimer;
+    offset = offset || 100;
+
+    function globalScroll(e) {
+      var theDocumentHeight = document.body.scrollHeight;
+      var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+
+      if (scrollY >= theDocumentHeight - window.innerHeight - offset) {
+        $(window).trigger('scrollBottom', e.type);
+
+        if (e.type == 'scroll') {
+          if (scrollEndTimer) {
+            clearTimeout(scrollEndTimer);
+          }
+
+          scrollEndTimer = setTimeout(function () {
+            $(window).trigger('scrollEnd');
+          }, debounce || 50);
+        }
+      }
+    }
+
+    $(window).on('scroll load afterflow', globalScroll);
+  },
+
+  /**
+     * 获取对象深层的值
+     * @params {Object} obj
+     * @params {String} path
+     * eg. getDeepValue(obj, 'a.b.c[0].name')
+     */
+  getDeepValue: function getDeepValue(obj, path) {
+    var current = obj || {};
+    var temp = path.split('.');
+    var paths = [];
+    var match = [];
+    temp.forEach(function (key) {
+      if (match = key.match(/(\w+)\[(\d+)\]/)) {
+        paths.push(match[1]);
+        paths.push(match[2]);
+      } else {
+        paths.push(key);
+      }
+    });
+
+    for (var i = 0, len = paths.length; i < len; i++) {
+      var key = paths[i];
+
+      if (current[key] === null || current[key] === undefined) {
+        return undefined;
+      }
+
+      current = current[key];
+    }
+
+    return current;
+  },
+  getTTWebId: function () {
+    var ttwebid = $.cookie('tt_webid') || String(parseInt(Math.random() * 10000));
+    return function () {
+      return ttwebid;
+    };
+  }(),
+  throttle: function throttle(fn) {
+    var interval = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+    var throttleLastTime = null;
+    return function () {
+      var ctx = this;
+      var args = arguments;
+      var nowTime = Number(new Date());
+
+      if (nowTime - throttleLastTime > interval || !throttleLastTime) {
+        fn.apply(ctx, args);
+        throttleLastTime = nowTime;
+      }
+    };
+  },
+  debounce: function debounce(fn) {
+    var interval = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+    var debounceTimeout = null;
+    return function () {
+      var ctx = this;
+      var args = arguments;
+
+      if (debounceTimeout) {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = null;
+      }
+
+      debounceTimeout = setTimeout(function () {
+        fn.apply(ctx, args);
+      }, interval);
+    };
+  },
+  getBrowserType: function getBrowserType() {
+    var _navigator = navigator,
+        userAgent = _navigator.userAgent; // 取得浏览器的userAgent字符串
+
+    var isOpera = userAgent.indexOf('Opera') > -1; // 判断是否Opera浏览器
+
+    var isIE = userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1 && !isOpera; // 判断是否IE浏览器
+
+    var isEdge = userAgent.indexOf('Edge') > -1; // 判断是否IE的Edge浏览器
+
+    var isFF = userAgent.indexOf('Firefox') > -1; // 判断是否Firefox浏览器
+
+    var isSafari = userAgent.indexOf('Safari') > -1 && userAgent.indexOf('Chrome') == -1; // 判断是否Safari浏览器
+
+    var isChrome = userAgent.indexOf('Chrome') > -1 && userAgent.indexOf('Safari') > -1; // 判断Chrome浏览器
+
+    if (isIE) {
+      return 'IE';
+    }
+
+    if (isOpera) {
+      return 'Opera';
+    }
+
+    if (isEdge) {
+      return 'Edge';
+    }
+
+    if (isFF) {
+      return 'FF';
+    }
+
+    if (isSafari) {
+      return 'Safari';
+    }
+
+    if (isChrome) {
+      return 'Chrome';
+    }
+
+    return 'other';
+  }
+};
+
+/***/ }),
+
+/***/ "fe2bca6be3b9fef944c9":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=index.afc906c1.js.map
