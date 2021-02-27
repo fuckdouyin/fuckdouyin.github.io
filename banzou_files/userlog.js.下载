@@ -1,0 +1,128 @@
+function CSCMS_Logadd(){
+	var username = $('#cscms_name').val();
+	var userpass = $('#cscms_pass').val();
+	if(username == ''){do_alert('帐号不能为空!');setTimeout('close_alert()', 2000);return;}
+	if(userpass == ''){do_alert('密码不能为空!');setTimeout('close_alert()', 2000);return;}
+	$.post('/index.php/user/ulog', {
+		username:username,userpass:userpass
+	},function(data){
+		if(data == 'ok'){
+			CSCMS_Login();
+		}else{
+			do_alert(data);setTimeout('close_alert()', 2000);
+		}
+	});
+}
+function CSCMS_Logadd2(){
+	var username = $('#cscms_name').val();
+	var userpass = $('#cscms_pass').val();
+	if(username == ''){do_alert('帐号不能为空!');setTimeout('close_alert()', 2000);return;}
+	if(userpass == ''){do_alert('密码不能为空!');setTimeout('close_alert()', 2000);return;}
+	$.post('/index.php/user/ulog', {
+		username:username,userpass:userpass
+	},function(data){
+		if(data == 'ok'){
+			CSCMS_Login2();
+			location.reload();
+		}else{
+			do_alert(data);setTimeout('close_alert()', 2000);
+		}
+	});
+}
+function CSCMS_Logout(){
+	$.get('/index.php/user/ulog/logout', function(data) {
+		if(data == 'ok'){
+			location.reload();
+		}
+	});
+}
+function CSCMS_Login(){
+	$.get('/index.php/getuser/index', function(data) {
+		if(data != 'no'){
+			var data = JSON.parse(data);
+			var level = '普通会员';
+          	var myrmb = '充值';
+			if(data.CS_RZID == 1){
+				level = '制作人';
+                var myrmb = '[提现]';
+                var userkuang = '<div class="head-user-data fl"><div class="user-data-inf fl"><div class="user-data-box fl"><span>账号:</span><em>'+data.CS_Name+'</em></div><div class="user-data-box fl"><span>级别:</span><em>'+level+'</em></div><div class="user-data-box fl"><span>收入的金币:</span><b>'+data.CS_RMB+'</b></div></div><div class="user-data-link fl"><ul><li><a href="/index.php/user/tixian"">提现金币</a></li><li><a href="/index.php/user/space">会员中心</a></li><li><a href="/index.php/user/pay/vip">升级VIP</a></li><li><a href="/index.php/user/down/finance2">下载记录</a></li><li><a href="javascript:;" onclick="CSCMS_Logout();">退出<i class="exit"></i></a></li></ul></div></div>';
+			}else{
+				if(data.CS_Vip == 1){
+					level = 'Vip会员';
+				}
+				var userkuang = '<div class="head-user-data fl"><div class="user-data-inf fl"><div class="user-data-box fl"><span>账号:</span><em>'+data.CS_Name+'</em></div><div class="user-data-box fl"><span>级别:</span><em>'+level+'</em></div><div class="user-data-box fl"><span>金币:</span><b>'+data.CS_Cion+'</b></div></div><div class="user-data-link fl"><ul><li><a href="/index.php/user/pay"">充值金币</a></li><li><a href="/index.php/user/space">会员中心</a></li><li><a href="/index.php/user/pay/vip">升级VIP</a></li><li><a href="/index.php/user/down">我的下载</a></li><li><a href="javascript:;" onclick="CSCMS_Logout();">退出<i class="exit"></i></a></li></ul></div></div>';
+			}
+			$('#cscms_login').remove();
+			$('#userinfo').append(userkuang);
+		}
+	});
+}
+function CSCMS_Login2(){
+	$.get('/index.php/getuser/index', function(data) {
+		if(data != 'no'){
+			var data = JSON.parse(data);
+				var userkuang = '<a href="/index.php/user/space"><i></i></a><a href="/index.php/user/space">我的</a>';
+			$('#cscms_login').remove();
+			$('#userinfo').append(userkuang);
+		}
+	});
+}
+//弹出信息提示框
+function do_alert( msg ){
+    var _height = document.documentElement.clientHeight||document.body.clientHeight;
+    var _top = (_height) ? (_height - 39)/2 + document.documentElement.scrollTop : 0;
+    var msgObj=document.createElement('div');
+    msgObj.setAttribute('id', 'msgInfo');
+    msgObj.setAttribute('align', 'center');
+    msgObj.style.position = 'absolute';
+    msgObj.style.top = _top + 'px';
+    msgObj.style.left = '0';
+    msgObj.style.width = '100%';
+    msgObj.style.height = '33px';
+    msgObj.style.zIndex = '999';
+    msgObj.innerHTML = '<span id="alert">'+ msg +'</span>';
+    document.body.appendChild(msgObj);
+};
+//关闭信息提示框
+function close_alert(){
+    document.body.removeChild(document.getElementById('msgInfo'));
+};
+//用户收藏歌曲
+function Collect(did){
+	$.post('/index.php/user/fav/add', {
+		did: did
+	}, function(data) {
+		if(data =='login'){
+			do_alert('请登录后收藏歌曲');
+			setTimeout(function(){
+				close_alert();
+			},2000);
+		}else{
+			if(data == 'ok'){
+				do_alert('恭喜你，收藏成功');setTimeout('close_alert()', 2000);
+			}else{
+				do_alert(data);setTimeout('close_alert()', 2000);
+			}
+		}
+	});
+}
+function Tovip(){
+	var vip = $('#cs_vip').val();
+	if(vip == 0){
+		do_alert('请选择要升级的会员组');setTimeout('close_alert()', 2000);
+		return;
+	}else{
+		$('#tovip').hide();
+		$.post('/index.php/user/pay/tovip', {
+			cs_vip: vip
+		}, function(data) {
+			do_alert(data);
+			$('#alert').width($('#alert').width()*2);
+			setTimeout(function(){
+				close_alert();
+				$('#tovip').show();
+				location.reload();
+			},2500);
+		});
+	}
+}

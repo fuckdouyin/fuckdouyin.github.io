@@ -1,0 +1,241 @@
+function SpaceSo($page,key){
+	var key = $('#music-key').val();
+	if(key == ''){
+		do_alert('请输入关键词!');setTimeout('close_alert()', 2000);return;
+	}
+	window.location.href='/index.php/user/music';
+}
+function modify(id,cion,song,yid){
+	var button = $('#m_'+id).html();
+	var cneir = '<input id="c_'+id+'" type="text" style="width:40px;text-align:center;" value="'+cion+'" />';
+	var sneir = '<input id="s_'+id+'" type="text" style="width:236px;" value="'+song+'" />';
+	if(button == '修改'){
+		$('#m_'+id).html('提交');
+		$('#mn_'+id).attr('href', 'javascript:;');
+		$('#mc_'+id).html(cneir);
+		$('#mn_'+id).html(sneir);
+	}else{
+		var name = $('#s_'+id).val();
+		var jinbi = parseInt($('#c_'+id).val());
+		if(name == ''){
+			do_alert('歌曲名称不能为空!');setTimeout('close_alert()', 1500);return;
+		}
+		$.post('/index.php/user/music/modify/'+yid, {
+			id:id,jinbi:jinbi,name:name
+		}, function(data) {
+			if(data == 'ok'){
+				$('#m_'+id).html('修改');
+				$('#mn_'+id).attr('href', '/index.php/dance/play/'+id);
+				$('#mc_'+id).html(jinbi);
+				$('#mn_'+id).html(name);
+				do_alert('恭喜你，操作成功!');setTimeout('close_alert()', 1500);return;
+			}else{
+				do_alert(data);setTimeout('close_alert()', 1500);return;
+			}
+		});
+	}
+}
+function judgeRZ(sign,rzon,rzinfo){
+		sign = parseInt(sign);
+		if(sign==0){
+		  layer.alert('您好，假如你是制作人 本站制作人月收入可达到20万元以上 【注意：本站不需要搬运者 从其他网站免费下载后上传本站（其他网站制作人作品除外）】请联系客服QQ 800183344 传送你的伴奏作品，审核通过后，为您开通上传权限，上传伴奏，赚取人民币，祝您伴奏愉快！！！', {
+              closeBtn: 0
+          }, function(index) {
+              layer.close(index);
+          });return;
+		}else{
+			var rzs = parseInt(getCookie('rzcookie'));
+			if(!parseInt(rzon) && rzs < 1){
+				layer.alert(rzinfo, {
+					closeBtn: 0
+					,title:'温馨提示'
+					,btn: ['前往'] //按钮
+				}, function(index) {
+					setCookie('rzcookie',1);
+					window.location.href='/index.php/user/music/add';
+					layer.close(index);
+				});return;
+			}else{
+				window.location.href='/index.php/user/music/add';
+			}
+		}
+	}
+
+function setCookie(name,value){
+	var Days = 1;
+	var exp = new Date();
+	exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+function getCookie(name){
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg)){
+		return unescape(arr[2]);
+	}else{
+		return 0;
+	}
+}
+
+window.onpageshow = function(e) {
+		layer.closeAll('loading');
+	};
+window.onfocus = function(e) {
+		layer.closeAll('loading');
+	};
+function showLoad(){
+	layer.load(1, {content:'正在进入伴奏页面，请耐心等待',time: 10*1000,success: function(layero){
+		layero.find('.layui-layer-content').css('padding-top', '40px');
+		layero.find('.layui-layer-content').css('width', '280px');
+		layero.find('.layui-layer-content').css('color', '#ffffff');
+		layero.find('.layui-layer-content').css('font-size', '16px');
+		layero.find('.layui-layer-content').css('background-position-x', '130px');
+		layero.find('.layui-layer-content').css('margin-left', '-130px');
+		layero.find('.layui-layer-content').css('text-align', 'center');
+	}});
+}
+$(document).ready(function() {
+	$(".myhref").click(function(event) {
+		showLoad();
+	});
+});
+
+
+function bzqiugou(){
+    $.ajax({
+      type: "POST",
+      global: false,
+      url: "/index.php/gbookb/getwrong?t="+Math.random(),
+      dataType: "text",
+      success: function(data){
+        if(data=='20001'){
+          do_alert('您需要先登录才能进行此操作');
+          setTimeout(function(){
+            close_alert();
+          },2000);
+          return false;
+        }else{
+         Playid = layer.open({
+            id: 'qiugou',
+            title: '求购伴奏',
+            shade: 0.8,
+            type: 1,
+            skin: 'layui-layer-rim',
+            area: ['580px', '300px'], 
+            content: '' +data+ '' 
+          });
+        }
+      },
+      error: function(){
+        alert("数据执行意外错误！");
+        return false;
+      }
+    });
+}
+
+function bzadd(){
+  	var name = $("#name").val();
+    var gs = $("#gs").val();
+    $.ajax({
+      type: "POST",
+      global: false,
+      url: "/index.php/gbookb/add?t="+Math.random(),
+      data:{name: name, gs: gs,t: Math.random()},
+      dataType: "text",
+      success: function(data){
+        if(data=='20001'){
+          alert('您需要先登录才能进行此操作!');
+          return false;
+       }else if(data=='10002'){
+          layer.msg('歌手不能为空!');
+          return false;  
+       }else if(data=='10003'){
+          layer.msg('歌曲名称不能为空!');
+          return false;          
+       }else if(data=='10004'){
+          layer.msg('每天只能求购一次!');
+          return false;   
+       }else if(data=='10005'){
+          layer.msg('该歌曲已求购过了!');
+          return false;   
+      }else if(data=='10006'){
+          layer.msg('该歌曲本站已有较好版本请搜索!');
+          return false;   
+       }else if(data=='10001'){
+          layer.msg('数据执行意外错误!');
+          return false; 
+       }else{
+          layer.msg("求购提交成功", {icon: 1});
+          setTimeout('parent.layer.close(Playid)', 1000);
+          return false;
+        }
+      },
+      error: function(){
+        alert("数据执行意外错误！");
+        return false;
+      }
+    });
+}
+
+
+function geterror(e){
+    $.ajax({
+      type: "POST",
+      global: false,
+      url: "/index.php/gbook/geterror?id="+e+"&t="+Math.random(),
+      dataType: "text",
+      success: function(data){
+        if(data=='20001'){
+          alert('您需要先登录才能进行此操作!');
+          return false;
+        }else{
+         Playid = layer.open({
+            id: 'qiugou',
+            title: '伴奏报错',
+            shade: 0.8,
+            type: 1,
+            skin: 'layui-layer-rim',
+            area: ['580px', '300px'], 
+            content: '' +data+ '' 
+          });
+        }
+      },
+      error: function(){
+        alert("数据执行意外错误！");
+        return false;
+      }
+    });
+}
+
+
+
+function getsubmit(){
+	var did = $("#gwtitle").val();
+	var neir = $("#gwcontent").val();
+    $.ajax({
+      type: "POST",
+      global: false,
+      url: "/index.php/gbook/getwrong?t="+Math.random(),
+      data:{did:did,neir:neir},
+      dataType: "text",
+      success: function(data){
+        if(data=='10004'){
+          layer.msg('数据执行意外错误!');
+          return false; 
+        }else if(data=='10001'){
+          layer.msg('报错原因不能为空!');
+          return false; 
+        }else if(data=='10002'){
+          layer.msg('此歌曲报错过了!');
+          return false; 
+       }else{
+          layer.msg("提交成功", {icon: 1});
+          setTimeout('parent.layer.close(Playid)', 1000);
+          return false;
+        }
+      },
+      error: function(){
+        alert("数据执行意外错误！");
+        return false;
+      }
+    });
+}

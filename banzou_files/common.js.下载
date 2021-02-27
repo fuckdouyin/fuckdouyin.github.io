@@ -1,0 +1,104 @@
+var web_url="/";
+
+//复制地址
+function copyToClipboard(url,title){
+   window.clipboardData.setData("Text",url);
+   do_alert(title);setTimeout('close_alert()', 2000);
+}
+$(function(){
+    function tabs(tabTit,on,tabCon){
+	$(tabCon).each(function(){
+	  $(this).children().eq(0).show();
+	  });
+	$(tabTit).each(function(){
+	  $(this).children().eq(0).addClass(on);
+	  });
+     $(tabTit).children().hover(function(){
+        $(this).addClass(on).siblings().removeClass(on);
+         var index = $(tabTit).children().index(this);
+         $(tabCon).children().eq(index).show().siblings().hide();
+    });
+     }
+   tabs(".tab-hd","active",".tab-bd");
+	$('.homesbox:odd').addClass('ml6');
+	 $('.songlist li:odd').addClass('bg1');
+	 $('.songlist li').hover(function(){
+		 $(this).removeClass("bg1");
+		 $(this).addClass("select");
+	 },function(){
+		 $(this).removeClass("select");
+		 $('.songlist li:odd').addClass('bg1');
+
+	 });
+ 
+  $('.navbox li.level').mousemove(function(){
+    $(this).find('ul').slideDown();//you can give it a speed
+	$(this).addClass('navclass');
+  });
+  $('.navbox li.level').mouseleave(function(){
+    $(this).find('ul').slideUp("fast");
+	$(this).removeClass('navclass');
+  });
+
+});
+
+
+function CheckAll(form){for (var i=0;i<form.elements.length;i++){var e = form.elements[i];e.checked = true}}
+function CheckOthers(form){for (var i=0;i<form.elements.length;i++){var e = form.elements[i];if (e.checked==false){e.checked = true;}else{e.checked = false;}}}
+
+
+function Piliang_Play(Param,J){
+	//播放选择
+	var a = "";
+	var length = Param.elements.length;
+	var c = 0;
+	for(var i = 0; i < length;i++){
+		if(Param.elements[i].type == "checkbox"){
+			if(Param.elements[i].checked){
+				c++;
+				if(a == ""){
+					a = Param.elements[i].value;
+				}else{
+					a = a + "," + Param.elements[i].value;
+				}
+			}
+		}
+	}
+		
+	if(c == 0){
+		alert("请至少选择一首歌曲！");
+	}else if(c > 100){
+		alert("对不起！每次最多选择100首，您当前选择了"+c+"首！");
+	}else{
+		if(J == 1){
+			var PlayWin = window.open("/index.php/dance/playsong?id=" + a,"play");
+			if(PlayWin == null){
+				alert("不能打开播放窗口，请检查您的浏览器是否已经设置了弹出窗口拦截！");
+			}
+		}else if(J == 2){
+			var PlayWin = window.open("/index.php/dance/playsong?id=" + a,"play");
+			if(PlayWin == null){
+				alert("不能打开播放窗口，请检查您的浏览器是否已经设置了弹出窗口拦截！");
+			}
+		}
+	}		
+}
+
+
+function getLight(pars)
+{
+//alert("视频播放器模式参数值："+string+"");
+	if(pars == "open")
+	{		close_light(this);	}
+	else
+	{		close_light(this);	}
+}
+
+
+//兼容性
+function thisMovie(movieName) {
+    if (navigator.appName.indexOf("Microsoft") != -1) {
+        return window[movieName]
+    }
+    else {        return document[movieName]    }
+}

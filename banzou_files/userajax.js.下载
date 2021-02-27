@@ -1,0 +1,109 @@
+﻿var DomainUrl = top.location.hostname;
+//上传舞曲
+function Uploadup(ids,type,msg,up,dx,yz,sc){  //类型，返回消息ID，返回URLID，上传方式，返回大小ID，返回音质ID，返回时长ID
+    
+	var Manag = new Dialog();
+	Manag.Width = 500;
+	Manag.Height= 250;
+	Manag.Title = "文件上传选择";
+        if(ids=='music'){
+	    //Manag.URL   ="http://up.banzou.name/index.php/user/upload?ac="+ids+"&msgurl="+msg+"&dxurl="+dx+"&yzurl="+yz+"&scurl="+sc+"&fhurl="+type+"&uid="+uid+"&key="+key;
+	    Manag.URL   ="/index.php/user/music/upload?ac="+ids+"&msgurl="+msg+"&dxurl="+dx+"&yzurl="+yz+"&scurl="+sc+"&fhurl="+type;
+        }else{
+	    Manag.URL   ="/index.php/user/music/upload?ac="+ids+"&msgurl="+msg+"&dxurl="+dx+"&yzurl="+yz+"&scurl="+sc+"&fhurl="+type;
+        }
+	Manag.show();
+   
+}
+
+//上传图片
+function Uploadpic(ids,msg){
+	var Manag = new Dialog();
+	Manag.Width = 430;
+	Manag.Height= 160;
+	Manag.Title = "上传图片";
+	Manag.URL   =cscms_path+"index.php/user/upload/pic?ac="+ids+"&msgurl="+msg;
+	Manag.show();
+}
+
+//上传头像成功返回
+function UploadPicSucceed(data) {
+	do_alert('恭喜您，保存头像成功！');
+        setTimeout('location.replace(location);', 2000);
+}
+
+//编辑器
+function FormEditor(cid){
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="'+cid+'"]', {
+			resizeType : 1,
+			allowPreviewEmoticons : false,
+			allowImageUpload : false,
+			items : [
+				'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+				'insertunorderedlist', '|', 'emoticons', 'image', 'link'],
+			afterBlur: function(){this.sync();} 
+		});
+	});
+
+}
+
+$$ = function(em) {
+    if (document.getElementById){ return document.getElementById(em); }
+    else if (document.all){ return document.all[em]; }
+    else if (document.layers){ return document.layers[em]; }
+    else{ return null; }
+};
+
+function get_tags(parentobj, tag){
+    if (typeof parentobj.getElementsByTagName != 'undefined'){ return parentobj.getElementsByTagName(tag);
+    }else if (parentobj.all && parentobj.all.tags){ return parentobj.all.tags(tag);
+    }else{ return new Array(); }
+};
+
+//联播
+function playsong(_id,_act)
+{
+    var v = [];
+    var a = get_tags($$(_id), 'input');
+
+    for (var i = 0; i < a.length; i++) {
+             if (_act == 'all' ) { a[i].checked = (a[i].checked) ? false : true; }
+             if (a[i].checked ) { v.push(a[i].value); }
+    }
+
+    if(_act!='all'){
+        if (3 > v.length){ 
+			do_alert('至少选择三首歌曲以上才能进行连播！'); setTimeout('close_alert()', 2000);
+			return; 
+	}else if(v.length > 50){
+			do_alert('一次最多连续播放50首歌曲！'); setTimeout('close_alert()', 2000);
+			return; 
+	}else{
+		window.open('/index.php/dance/playsong?id=' + v.join(','), 'play');
+	}
+    }
+}
+
+document.writeln("<style>#alert {display:block; color:#333;padding-top:9px; width:280px; height:80px;line-height:80px; font-size:14px; padding:1px; background-color:#fbfbfb;border:1px solid #e2e2e2;box-shadow:0px 0px 15px #000; }</style>");
+function do_alert( msg ){
+    var _height = document.documentElement.clientHeight||document.body.clientHeight;
+    var _top = (_height) ? (_height - 39)/2 + document.documentElement.scrollTop : 0;
+    var msgObj=document.createElement('div');
+    msgObj.setAttribute('id', 'msgInfo');
+    msgObj.setAttribute('align', 'center');
+    msgObj.style.position = 'absolute';
+    msgObj.style.top = _top + 'px';
+    msgObj.style.left = '0';
+    msgObj.style.width = '100%';
+    msgObj.style.height = '33px';
+    msgObj.style.zIndex = '999';
+    msgObj.innerHTML = '<span id="alert">'+ msg +'</span>';
+    document.body.appendChild(msgObj);
+};
+
+function close_alert(){
+    document.body.removeChild(document.getElementById('msgInfo'));
+};

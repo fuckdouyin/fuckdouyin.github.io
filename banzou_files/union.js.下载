@@ -1,0 +1,121 @@
+var AP;
+function playAccPreview(accId, keyChange){//新播放
+    if(keyChange != "0"){
+        CheckLogin_Exc();
+    }
+    $("#downloadBar").hide();
+    $("#buttonsBar button").prop( "disabled", true );
+    $("#progressBarContainer").prop("class", "blert blert-info text-center")
+        .html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>'
+            + '正在转调，根据文件大小，改调需要耗时10 ~ 30秒，请勿离开本页面...').show();
+    $.getJSON("/index.php/api/generate/id/" + accId + "/" + keyChange, function(data){
+        if(data.code == 1){
+            $("#myModalAccProps").html('');
+            $("#downloadBar").html('<a class="btn btn-lg btn-success" ' +
+                'href="javascript:;"  onclick="isdown(' + accId + ',' + keyChange + ');">' +
+                '<span class="glyphicon glyphicon-download-alt"></span> 下载 (' + data.name + ')</a>').show();
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").hide();
+            reCreateAPlayer("APlayerContainer",data.accName, data.name, data.url, data.artists, "");
+            if(keyChange != "0"){
+                layer.msg('转调完成，试听切换中...');
+            }
+        }else{
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").prop("class", "blert blert-danger text-center").html(data.message).show();
+        }
+    });
+}
+
+function initPreviewBox(accId){//默认
+    $("#downloadBar").hide();
+    $("#buttonsBar button").prop( "disabled", true );
+    $("#progressBarContainer").prop("class", "blert blert-info text-center")
+        .html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>'
+            + '正在转调，根据文件大小，改调需要耗时10 ~ 30秒，请勿离开本页面...').show();
+        $.getJSON("/index.php/api/generate/id/" + accId + "/0", function(data){
+        if(data.code == 1){
+            $("#downloadBar").html('<a class="btn btn-lg btn-success" ' +
+                'href="javascript:;"  onclick="isdown(' + accId + ');">' +
+                '<span class="glyphicon glyphicon-download-alt"></span> 下载 (' + data.name + ')</a>').show();
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").hide();
+            initAPlayer("APlayerContainer",data.accName, data.name, data.url, data.artists, "");
+        }else{
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").prop("class", "blert blert-danger text-center").html(data.message).show();
+        }
+    });
+}
+
+
+function downAccPreview(accId, keyChange){
+    $("#downloadBar").hide();
+    $("#buttonsBar button").prop( "disabled", true );
+    $("#progressBarContainer").prop("class", "blert blert-info text-center")
+        .html('<span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>'
+            + '下载版正在转调，根据文件大小，改调需要耗时10 ~ 30秒，请勿离开本页面...').show();
+        $.getJSON("/index.php/api/genedown/id/" + accId + "/"+ keyChange, function(data){
+        if(data.code == 1){
+            $("#downloadBar").html('<a class="btn btn-lg btn-success" ' +
+                'href="javascript:;"  onclick="isdown(' + accId + ',' + keyChange + ');">' +
+                '<span class="glyphicon glyphicon-download-alt"></span> 下载 (' + data.name + ')</a>').show();
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").hide();
+            window.location.href=encodeURI(data.url);
+        }else{
+            $("#buttonsBar button").prop( "disabled", false );
+            $("#progressBarContainer").prop("class", "blert blert-danger text-center").html(data.message).show();
+        }
+    });
+}
+
+
+function initAPlayer(playerContainerID, musicTitle, musicKeyChange, musicUrl, musicSingers){//加载play
+    if(musicSingers.length){
+        var artistPhoto = "http://www.banzouzhongguo.com/templet/skins/img/" + musicSingers[0].photo;
+        var musicSinger = musicSingers[0].name;
+    }else{
+        var artistPhoto = "http://www.banzouzhongguo.com/templet/skins/img/40d03c_190x190.png";
+        var musicSinger = "";
+    }
+    AP = new APlayer({
+        element: document.getElementById(playerContainerID),
+        narrow: false,
+        autoplay: true,
+        mutex: true,
+        theme: '#e6d0b2',
+        mode: 'loop',
+        preload: 'metadata',
+        listmaxheight: '513px',
+        music: {
+            title: "【" + musicTitle + "】 伴奏 " + musicKeyChange,
+            author: musicSinger,
+            url: musicUrl,
+            pic: artistPhoto
+        }
+    });
+    AP.play();
+}
+
+function reCreateAPlayer(playerContainerID, musicTitle, musicKeyChange, musicUrl, musicSingers) {
+    AP.destroy();
+    initAPlayer(playerContainerID, musicTitle, musicKeyChange, musicUrl, musicSingers);
+    AP.play();
+}
+
+$(document).ready(function(){
+    var APlayerContainer = $("#APlayerContainer");
+    if(APlayerContainer.length){
+        initPreviewBox(APlayerContainer.attr("datasrc"), 0);
+    }
+});
+
+function CheckLogin_Exc(){
+       $.post('/index.php/api/login', function(data) {
+            if(data == 'login'){
+                layer.msg('您需要先登录才能进行此操作!');
+                return false; 
+            }
+        });
+}

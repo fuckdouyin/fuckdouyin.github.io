@@ -1,0 +1,173 @@
+//iframe弹出层调用
+function Popsboxif(_title,_width,_height,_iframe){
+		$.webox({
+			height:_height,
+			width:_width,
+			bgvisibel:true,
+			title:_title,
+			iframe:_iframe
+		});
+}
+$.extend({
+	webox:function(option){
+		var _x,_y,m,allscreen=false;
+		if(!option){
+			alert('options can\'t be empty');
+			return;
+		};
+		if(!option['html']&&!option['iframe']){
+			alert('html attribute and iframe attribute can\'t be both empty');
+			return;
+		};
+		option['parent']='webox';
+		option['locked']='locked';
+		$(document).ready(function(e){
+			$('.webox').remove();
+			$('.background').remove();
+			var width=option['width']?option['width']:400;
+			var height=option['height']?option['height']:240;
+			$('body').append('<div class="background" style="display:none;"></div><div class="webox" style="width:'+width+'px;height:'+height+'px;display:none;"><div id="inside" style="height:'+height+'px;"><h1 id="locked" onselectstart="return false;">'+(option['title']?option['title']:'webox')+'<a class="span" href="javascript:void(0);"></a></h1>'+(option['iframe']?'<iframe class="w_iframe" src="'+option['iframe']+'" frameborder="0" width="100%" scrolling="yes" style="border:none;overflow-x:hidden;height:'+parseInt(height-30)+'px;"></iframe>':option['html']?option['html']:'')+'</div></div>');
+			if(navigator.userAgent.indexOf('MSIE 7')>0||navigator.userAgent.indexOf('MSIE 8')>0){
+				$('.webox').css({'filter':'progid:DXImageTransform.Microsoft.gradient(startColorstr=#55000000,endColorstr=#55000000)'});
+			}if(option['bgvisibel']){
+				$('.background').fadeTo('slow',0.3);
+			};
+			$('.webox').css({display:'block'});
+			$('#'+option['locked']+' .span').click(function(){
+				$('.webox').css({display:'none'});
+				$('.background').css({display:'none'});
+			});
+			var marginLeft=parseInt(width/2);
+			var marginTop=parseInt(height/2);
+			var winWidth=parseInt($(window).width()/2);
+			var winHeight=parseInt($(window).height()/2.2);
+			var left=winWidth-marginLeft;
+			var top=winHeight-marginTop;
+			$('.webox').css({left:left,top:top});
+			$('#'+option['locked']).mousedown(function(e){
+				if(e.which){
+					m=true;
+					_x=e.pageX-parseInt($('.webox').css('left'));
+					_y=e.pageY-parseInt($('.webox').css('top'));
+				}
+				}).dblclick(function(){
+					if(allscreen){
+						$('.webox').css({height:height,width:width});
+						$('#inside').height(height);
+						$('.w_iframe').height(height-30);
+						$('.webox').css({left:left,top:top});
+						allscreen = false;
+					}else{
+						allscreen=true;
+						var screenHeight = $(window).height();
+						var screenWidth = $(window).width();$
+						('.webox').css({'width':screenWidth-18,'height':screenHeight-18,'top':'0px','left':'0px'});
+						$('#inside').height(screenHeight-20);
+						$('.w_iframe').height(screenHeight-50);
+					}
+				});
+			}).mousemove(function(e){
+				if(m && !allscreen){
+					var x=e.pageX-_x;
+					var y=e.pageY-_y;
+					$('.webox').css({left:x});
+					$('.webox').css({top:y});
+				}
+			}).mouseup(function(){
+				m=false;
+			});
+			$(window).resize(function(){
+				if(allscreen){
+					var screenHeight = $(window).height();
+					var screenWidth = $(window).width();
+					$('.webox').css({'width':screenWidth-18,'height':screenHeight-18,'top':'0px','left':'0px'});
+					$('#inside').height(screenHeight-20);
+					$('.w_iframe').height(screenHeight-50);
+				}
+			});
+	}
+});
+
+
+
+
+$(function(){
+	popDiyTags(); 
+});
+
+//tag pop
+function popDiyTags(){	 
+	   //删除选中的标签
+	   function removeTags(){
+		   $(".selected-list01 .selected-del").click(function(){
+			  var t1=$(this).parent().find("span").text();
+			  $(this).parent().remove();
+			   $(".selected-list02 li span").each(function(){
+				   if($(this).text()==t1){
+					   $(this).parent().remove();
+					   }
+			    })
+				$(".popDiyTags-list dd a").each(function(){
+				   if($(this).text()==t1){
+					   $(this).removeClass("selected");
+					   }
+					})
+			   $(".selected-index span").text($(".selected-list li").length/2);	
+			  return false;
+		  })
+		  $(".selected-list02 .selected-del").click(function(){
+			  var t2=$(this).parent().find("span").text();
+			  $(this).parent().remove();
+			   $(".selected-list01 li span").each(function(){
+				   if($(this).text()==t2){
+					   $(this).parent().remove();
+					   }
+			  })
+			  $(".popDiyTags-list dd a").each(function(){
+				   if($(this).text()==t2){
+					   $(this).removeClass("selected");
+					   }
+					})
+			  $(".selected-index span").text($(".selected-list li").length/2);	
+			  return false;
+		  })
+	  }
+	  //选择标签
+	  $(".popDiyTags-list dd a").click(function(){
+			var a=$(this).text();
+			if($(this).hasClass("selected")){
+				alert('该标签已选择');
+				return false;
+				}else{
+					if($(".selected-list li").length<10){
+						$(this).addClass("selected")
+						$(".selected-index span").text($(".selected-list li").length/2+1);	  
+						$(".selected-list01").append("<li><span>"+a+"</span><a class='selected-del' href='#'></a></li>")
+						$(".selected-list02").append("<li><span>"+a+"</span><a class='selected-del' href='#'></a></li>")
+						removeTags();
+						return false;
+					}else{
+						alert('您已选择了5个标签，最多设置5个标签！');
+						return false;
+					}
+				}
+	 })
+	 //保存标签
+	$(".popDiyTags-title .btnTure").click(function(){
+		if($(".selected-list01 li").length==0){
+			popclose();
+			return false;
+		}else{
+			var tagArraySave=new Array();
+			$(".selected-list01 li").each(function(i){
+				tagArraySave.push($(this).find("span").text())
+			}) 
+			$.each(tagArraySave,function(i){
+				$(".div-info .tags").append("<a href='javascript:void(0);'>"+tagArraySave[i]+"</a>") 
+			}); 
+			$(".div-info .tips span").text($(".div-info .tags a").length)
+			ReturnValue(tagArraySave);
+			return false;
+		}
+	})
+}
