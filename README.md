@@ -1,16 +1,18 @@
-# 触漫/虾漫
+# 这下面的网站都是黑心网站
 
-这里只是一个无名小站
+0.0.0.0 www.banzou.name
+0.0.0.0 www.banzouzhongguo.com
+0.0.0.0 29xf.com
+0.0.0.0 zhizuobanzou.com
+0.0.0.0 banzoushifu.com
+0.0.0.0 banzouzhijia.cn
+0.0.0.0 www.banzou68.com
+0.0.0.0 www.banzou5.com
+0.0.0.0 0zou.com
+0.0.0.0 boardinghouse.cn
+0.0.0.0 www.8sing.com
+0.0.0.0 www.wyyyzz.com
+0.0.0.0 www.zgbanzou.com
 
 
 我最恨的qq号是：335338286
-
-请注意：本网坚决拥护中国共产党领导，坚决打击任何违规违法内容，若您发现任何有害信息，请E-Mail：举报，我们核实后将给予现金奖励！爱国是每个中国人应尽的责任，爱国从我做起！为实现中国梦，实现中国腾飞而努力！
-
-附上一份礼物和那个927的apk下载
-
-恭喜触漫踩到了gh的雷
-
-㊗️触漫在成长的道路上越走越远
-
-本项目仅供娱乐，切勿当真
