@@ -1,4 +1,4 @@
-# 这下面的网站都是黑心网站
+# 这下面的网站都是黑心网站，坑大家的钱
 
 0.0.0.0 www.banzou.name
 0.0.0.0 www.banzouzhongguo.com
