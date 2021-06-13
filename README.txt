@@ -13,6 +13,8 @@
 0.0.0.0 www.8sing.com
 0.0.0.0 www.wyyyzz.com
 0.0.0.0 www.zgbanzou.com
+0.0.0.0 space.mvbox.cn
+83596712 见到这个人就拉黑他
 
 # 不要在百度上搜这些东西
 
